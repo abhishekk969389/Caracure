@@ -12,31 +12,19 @@ import {
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Appointment", href: "/appointment" },
-  { label: "Services", href: "/services" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/blog" },
-];
+import type { IconType } from "react-icons";
+import { site as carData } from "@/data/index";
+import type { CaracureFooterData, CaracureBrandData } from "@/data/index";
 
-const services = [
-  { label: "Wheel Service", href: "/services/wheel-service" },
-  { label: "Oil Change", href: "/services/oil-change" },
-  { label: "Engine Repair", href: "/services/engine-repair" },
-  { label: "Inspection Service", href: "/services/inspection-service" },
-  { label: "Car Cleaning", href: "/services/car-cleaning" },
-  { label: "Engine Cleaning", href: "/services/engine-cleaning" },
-  { label: "Engine Upgrade", href: "/services/engine-upgrade" },
-];
+const footerData: CaracureFooterData = carData.footer as CaracureFooterData;
+const brandData: CaracureBrandData = carData.brand as CaracureBrandData;
 
-const socials = [
-  { label: "Facebook", href: "#", Icon: FaFacebookF },
-  { label: "Twitter", href: "#", Icon: FaTwitter },
-  { label: "Instagram", href: "#", Icon: FaInstagram },
-  { label: "YouTube", href: "#", Icon: FaYoutube },
-];
+const iconMap: Record<string, IconType> = {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+};
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -66,11 +54,13 @@ function LinkList({ items }: { items: { label: string; href: string }[] }) {
 }
 
 export default function Footer() {
+  if (!footerData || !brandData) return null;
+
   return (
     <footer className="relative mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-white">
       {/* Background image: /public/footer.png */}
       <Image
-        src="/footer.png"
+        src={footerData.bgImage}
         alt=""
         fill
         sizes="100vw"
@@ -87,8 +77,8 @@ export default function Footer() {
               <Link href="/" aria-label="CarAcure home" className="inline-block">
                 {/* Put your logo at /public/logo.png */}
                 <Image
-                  src="/main-logo.png"
-                  alt="CarAcure - Car Repair & Service"
+                  src={brandData.logo}
+                  alt={brandData.logoAlt}
                   width={320}
                   height={90}
                   className="h-auto w-[220px] sm:w-[280px] lg:w-[300px]"
@@ -96,36 +86,37 @@ export default function Footer() {
               </Link>
 
               <p className="mt-5 max-w-[460px] text-sm leading-relaxed text-white/90 sm:text-base">
-                We provide reliable and professional car repair and auto
-                services to keep your vehicle running smoothly and safely on
-                the road. Our skilled technicians are committed to delivering
-                quality service and complete customer satisfaction.
+                {footerData.aboutText}
               </p>
 
               <div className="mt-6 flex items-center gap-3">
-                {socials.map(({ label, href, Icon }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    aria-label={label}
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 text-white transition hover:border-[#e2232b] hover:bg-[#e2232b]"
-                  >
-                    <Icon className="text-base" />
-                  </Link>
-                ))}
+                {footerData.socials.map(({ label, href, icon }) => {
+                  const Icon = iconMap[icon];
+                  if (!Icon) return null;
+                  return (
+                    <Link
+                      key={label}
+                      href={href}
+                      aria-label={label}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 text-white transition hover:border-[#e2232b] hover:bg-[#e2232b]"
+                    >
+                      <Icon className="text-base" />
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
               <FooterHeading>Quick Links</FooterHeading>
-              <LinkList items={quickLinks} />
+              <LinkList items={footerData.quickLinks} />
             </div>
 
             {/* Our Services */}
             <div>
               <FooterHeading>Our Services</FooterHeading>
-              <LinkList items={services} />
+              <LinkList items={footerData.services} />
             </div>
 
             {/* Contact */}
@@ -137,8 +128,8 @@ export default function Footer() {
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e2232b]">
                     <FaPhoneAlt className="text-sm" />
                   </span>
-                  <a href="tel:+919876543210" className="hover:text-[#e2232b]">
-                    +91 98765 43210
+                  <a href={brandData.phoneHref} className="hover:text-[#e2232b]">
+                    {brandData.phoneLabel}
                   </a>
                 </li>
                 <li className="flex items-center gap-4">
@@ -146,10 +137,10 @@ export default function Footer() {
                     <FaEnvelope className="text-sm" />
                   </span>
                   <a
-                    href="mailto:info@caracure.com"
+                    href={brandData.emailHref}
                     className="break-all hover:text-[#e2232b]"
                   >
-                    info@caracure.com
+                    {brandData.email}
                   </a>
                 </li>
                 <li className="flex items-center gap-4">
@@ -157,9 +148,9 @@ export default function Footer() {
                     <FaMapMarkerAlt className="text-sm" />
                   </span>
                   <address className="not-italic leading-snug">
-                    123 Auto Street,
+                    {brandData.addressLine1}
                     <br />
-                    New Delhi, India - 110001
+                    {brandData.addressLine2}
                   </address>
                 </li>
               </ul>
@@ -172,10 +163,10 @@ export default function Footer() {
                 <span className="h-12 w-px shrink-0 bg-white/60 xl:h-14" />
                 <div className="min-w-0">
                   <p className="whitespace-nowrap text-[15px] font-bold leading-tight text-white xl:text-base">
-                    24/7 Customer Support
+                    {footerData.supportCard.title}
                   </p>
                   <p className="mt-1 text-[13px] leading-snug text-white/90 xl:text-sm">
-                    We&apos;re always here to help you with your vehicle needs.
+                    {footerData.supportCard.text}
                   </p>
                 </div>
               </div>
@@ -186,8 +177,8 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10">
           <div className="mx-auto max-w-[1320px] px-4 py-5 text-center text-sm sm:px-6 sm:py-6 sm:text-base lg:px-10 xl:px-6">
-            &copy; Copyrights {new Date().getFullYear()}{" "}
-            <span className="text-[#e2232b]">CarAcure</span>. All Rights
+            &copy; Copyrights 2026{" "}
+            <span className="text-[#e2232b]">{brandData.name}</span>. All Rights
             Reserved.
           </div>
         </div>

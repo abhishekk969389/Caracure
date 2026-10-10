@@ -1,66 +1,28 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUser, FaComment, FaHeart, FaArrowRight } from "react-icons/fa";
 
-type Post = {
-  id: number;
-  day: string;
-  month: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  comments: number;
-  favorites: number;
-  image: string;
-  href: string;
-};
+import { site as carData } from "@/data/index";
+import type { CaracureBlogData } from "@/data/index";
 
-const posts: Post[] = [
-  {
-    id: 1,
-    day: "21",
-    month: "MAR",
-    title: "Essential Tips to Keep Your Car in Top Condition",
-    excerpt:
-      "Learn simple and effective car maintenance tips to improve performance, safety and extend the life of your vehicle.",
-    author: "Admin",
-    comments: 8,
-    favorites: 12,
-    image:
-      "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&h=760&q=80",
-    href: "/blog/essential-tips-to-keep-your-car-in-top-condition",
-  },
-  {
-    id: 2,
-    day: "25",
-    month: "MAR",
-    title: "Why Regular Oil Change is Important for Your Car",
-    excerpt:
-      "Find out how regular oil changes help your engine run smoothly, improve fuel efficiency and prevent costly repairs.",
-    author: "Admin",
-    comments: 10,
-    favorites: 12,
-    image:
-      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
-    href: "/blog/why-regular-oil-change-is-important",
-  },
-  {
-    id: 3,
-    day: "28",
-    month: "MAR",
-    title: "Signs Your Car Needs Immediate Servicing",
-    excerpt:
-      "Know the common warning signs that indicate your car needs professional attention to avoid major breakdowns.",
-    author: "Admin",
-    comments: 15,
-    favorites: 12,
-    image:
-      "https://images.unsplash.com/photo-1632823471565-1ecdf5c6da05?auto=format&fit=crop&w=900&h=760&q=80",
-    href: "/blog/signs-your-car-needs-immediate-servicing",
-  },
-];
+const blogData: CaracureBlogData = carData.ourBlogs as CaracureBlogData;
 
-export default function LatestNews() {
+export default function LatestNews({ isPaginated = false }: { isPaginated?: boolean }) {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  if (!blogData) return null;
+
+  const itemsPerPage = 6;
+  const totalPosts = blogData.posts.length;
+  const totalPages = Math.ceil(totalPosts / itemsPerPage);
+
+  const displayedPosts = isPaginated
+    ? blogData.posts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+    : blogData.posts.slice(0, 3); // Home page shows only top 3
+
   return (
     <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
@@ -69,23 +31,22 @@ export default function LatestNews() {
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-600 sm:text-sm">
-              Our Blog
+              {blogData.badge}
             </p>
           </div>
 
           <h2 className="text-3xl font-extrabold uppercase text-[#0d1f45] sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[48px]">
-            Latest <span className="text-[#e2232b]">News</span>
+            {blogData.titlePrefix}<span className="text-[#e2232b]">{blogData.titleHighlight}</span>
           </h2>
 
           <p className="mx-auto max-w-[640px] text-sm leading-relaxed text-slate-600 sm:text-base">
-            Stay updated with our latest tips, service updates and expert advice
-            to keep your vehicle in the best condition.
+            {blogData.description}
           </p>
         </div>
 
         {/* Cards: 1 col mobile, 2 col md, 3 col lg+ */}
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:gap-6">
-          {posts.map((post) => (
+          {displayedPosts.map((post) => (
             <article
               key={post.id}
               className="flex h-full flex-col rounded-md bg-white p-4 shadow-[0_8px_30px_rgba(13,31,69,0.08)] sm:p-5"
@@ -150,6 +111,42 @@ export default function LatestNews() {
             </article>
           ))}
         </div>
+
+        {/* Pagination */}
+        {isPaginated && totalPages > 1 && (
+          <div className="mt-10 flex items-center justify-center gap-2">
+            <button
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="flex h-10 w-10 items-center justify-center border border-gray-400 text-gray-900 transition hover:bg-[#e2232b] hover:text-white hover:border-[#e2232b] disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-gray-600 disabled:hover:border-gray-300"
+            >
+              &lt;
+            </button>
+            {Array.from({ length: totalPages }).map((_, i) => {
+              const pageNumber = i + 1;
+              return (
+                <button
+                  key={pageNumber}
+                  onClick={() => setCurrentPage(pageNumber)}
+                  className={`flex h-10 w-10 items-center justify-center border transition ${
+                    currentPage === pageNumber
+                      ? "border-[#e2232b] bg-[#e2232b] text-white"
+                      : "border-gray-300 text-gray-600 hover:border-[#e2232b] hover:bg-[#e2232b] hover:text-white"
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
+            <button
+              onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="flex h-10 w-10 items-center justify-center border border-gray-300 text-gray-600 transition hover:bg-[#e2232b] hover:text-white hover:border-[#e2232b] disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-gray-600 disabled:hover:border-gray-300"
+            >
+              &gt;
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

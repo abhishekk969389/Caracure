@@ -6,38 +6,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 
-type NavItem = {
-  label: string;
-  href: string;
-  children?: { label: string; href: string }[];
-};
+import { site as carData } from "@/data/index";
+import type { CaracureBrandData, CaracureHeaderData } from "@/data/index";
 
-const navItems: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "Car Repair", href: "/services/car-repair" },
-      { label: "Oil Change", href: "/services/oil-change" },
-      { label: "Wheel Alignment", href: "/services/wheel-alignment" },
-      { label: "Brake Service", href: "/services/brake-service" },
-      { label: "Car Wash & Detailing", href: "/services/car-wash" },
-    ],
-  },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact Us", href: "/contact" },
-];
+const brandData: CaracureBrandData = carData.brand as CaracureBrandData;
+const headerData: CaracureHeaderData = carData.navbar as CaracureHeaderData;
 
-const CTA = { label: "Book a Service", href: "/contact" };
+
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  if (!brandData || !headerData) return null;
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
@@ -58,8 +40,8 @@ export default function Navbar() {
           className="relative block h-12 w-[140px] shrink-0 sm:h-14 sm:w-[162px] lg:h-20 lg:w-[280px] xl:h-[88px] xl:w-[280px]"
         >
           <Image
-            src="/main-logo.png"
-            alt="CarAcure"
+            src={brandData.logo}
+            alt={brandData.logoAlt}
             fill
             priority
             sizes="(min-width: 1280px) 255px, (min-width: 1024px) 186px, (min-width: 640px) 162px, 140px"
@@ -71,7 +53,7 @@ export default function Navbar() {
             so justify-between spreads logo / nav / button evenly) */}
         <div className="hidden lg:contents">
           <nav aria-label="Main" className="flex items-center gap-6 lg:gap-8 xl:gap-10">
-            {navItems.map((item) => {
+            {headerData.navItems.map((item) => {
               const active = isActive(item.href);
 
               // Matched typography, colors, and underline styling from the image
@@ -121,10 +103,10 @@ export default function Navbar() {
 
           {/* Book a Service CTA Button */}
           <Link
-            href={CTA.href}
-            className="whitespace-nowrap rounded-full bg-[#e2232b] px-8 py-3 text-[15px] font-semibold text-white shadow-md shadow-red-500/25 transition-all duration-200 hover:bg-[#c91d24] hover:shadow-lg hover:shadow-red-500/35 lg:px-9 lg:py-4 lg:text-[18px]"
+            href={headerData.cta.href}
+            className="whitespace-nowrap rounded-full bg-[#e2232b] px-8 py-3 text-[15px] font-semibold text-white shadow-md shadow-red-500/25 transition-all duration-200 hover:bg-[#c91d24] hover:shadow-lg hover:shadow-red-500/35 lg:px-9 lg:py-3 lg:text-[18px]"
           >
-            {CTA.label}
+            {headerData.cta.label}
           </Link>
         </div>
 
@@ -148,7 +130,7 @@ export default function Navbar() {
             className="mx-auto max-h-[calc(100vh-80px)] max-w-[1440px] overflow-y-auto px-5 py-4"
           >
             <ul className="flex flex-col divide-y divide-gray-100">
-              {navItems.map((item) => {
+              {headerData.navItems.map((item) => {
                 const active = isActive(item.href);
                 const itemClass = `block flex-1 py-3.5 text-[16px] font-semibold ${
                   active ? "text-[#e2232b]" : "text-[#0d1f45]"
@@ -204,11 +186,11 @@ export default function Navbar() {
             </ul>
 
             <Link
-              href={CTA.href}
+              href={headerData.cta.href}
               onClick={closeMenu}
               className="mt-5 block rounded-full bg-[#e2232b] py-3 text-center text-[16px] font-semibold text-white shadow-md shadow-red-500/25 transition-colors hover:bg-[#c91d24]"
             >
-              {CTA.label}
+              {headerData.cta.label}
             </Link>
           </nav>
         </div>

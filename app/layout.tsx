@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Exo_2, Mulish } from "next/font/google";
+import TopBar from "./components/topbar";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import "./globals.css";
 
 // Headings (h1, h2) font
@@ -30,7 +33,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${exo2.variable} ${mulish.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <TopBar />
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -5,81 +5,17 @@ import Image from "next/image";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
-type Testimonial = {
-  id: number;
-  name: string;
-  location: string;
-  text: string;
-  rating: number;
-  avatar: string;
-};
+import { site as carData } from "@/data/index";
+import type { CaracureTestimonialData } from "@/data/index";
 
-const BG_IMAGE =
-  "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80";
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Priya Sharma",
-    location: "New Delhi, India",
-    text: "Excellent service and professional staff! My car was serviced on time and now it's running smoother than ever. Highly recommended for anyone looking for reliable car care.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-  {
-    id: 2,
-    name: "Rahul Verma",
-    location: "Gurgaon, India",
-    text: "Great experience! The team quickly identified the issue and fixed it at a reasonable cost. Very honest and skilled. I'll definitely come back for future services.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-  {
-    id: 3,
-    name: "Ananya Gupta",
-    location: "Noida, India",
-    text: "Transparent pricing and no unnecessary add-ons. They explained every repair clearly and returned my car earlier than promised. Truly a trustworthy garage.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-  {
-    id: 4,
-    name: "Amit Khanna",
-    location: "Faridabad, India",
-    text: "Brought my SUV for a brake and suspension issue. The mechanics were knowledgeable and the work quality is top-notch. The ride feels brand new again.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-  {
-    id: 5,
-    name: "Neha Kapoor",
-    location: "Ghaziabad, India",
-    text: "Friendly staff, clean workshop and quick pickup and drop service. My regular service now happens here without any stress. Highly satisfied with the results.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-  {
-    id: 6,
-    name: "Vikram Singh",
-    location: "Greater Noida, India",
-    text: "Best car service I've had in years. They diagnosed an engine noise others missed and fixed it the same day. Fair price and genuine spare parts.",
-    rating: 5,
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
-  },
-];
+const testimonialData: CaracureTestimonialData = carData.testimonials as CaracureTestimonialData;
 
 export default function Testimonials() {
   // 1 card on mobile / tablet, 2 cards on lg and above
   const [perView, setPerView] = useState(1);
   const [page, setPage] = useState(0);
 
-  const pageCount = Math.ceil(testimonials.length / perView);
+  const pageCount = Math.ceil((testimonialData?.testimonials.length || 0) / perView);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 1024px)");
@@ -103,11 +39,13 @@ export default function Testimonials() {
     [pageCount]
   );
 
+  if (!testimonialData) return null;
+
   return (
     <section className="relative overflow-hidden py-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       {/* Background image + dark overlay */}
       <Image
-        src={BG_IMAGE}
+        src={testimonialData.bgImage}
         alt=""
         fill
         sizes="100vw"
@@ -122,16 +60,16 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-white sm:text-sm">
-              Client Feedback
+              {testimonialData.badge}
             </p>
           </div>
 
           <h2 className="text-3xl font-extrabold uppercase text-white sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[48px]">
-            Testi<span className="text-[#e2232b]">monials</span>
+            {testimonialData.titlePrefix}<span className="text-[#e2232b]">{testimonialData.titleHighlight}</span>
           </h2>
 
           <p className="mx-auto max-w-[640px] text-sm leading-relaxed text-white/90 sm:text-base">
-            What our customers say about our car repair and service experience.
+            {testimonialData.description}
           </p>
         </div>
 
@@ -141,7 +79,7 @@ export default function Testimonials() {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${page * 100}%)` }}
           >
-            {testimonials.map((t) => (
+            {testimonialData.testimonials.map((t) => (
               <div
                 key={t.id}
                 className="w-full shrink-0 px-0 py-1 lg:w-1/2 lg:px-3"

@@ -1,0 +1,1042 @@
+{
+  "CaracureIndustries": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "TopBar": "CaracureTopBar1",
+          "Header": "CaracureHeader1",
+          "Footer": "CaracureFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "CaracureBanner1"
+              },
+              {
+                "key": "AboutSection",
+                "component": "CaracureAboutSection1"
+              },
+              {
+                "key": "Services",
+                "component": "CaracureServices1"
+              },
+              {
+                "key": "Help",
+                "component": "CaracureHelp1"
+              },
+              {
+                "key": "Team",
+                "component": "CaracureTeam1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "CaracureTestimonial1"
+              },
+              {
+                "key": "Blog",
+                "component": "CaracureBlog1"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "teams": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "contact": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          },
+          "appointment": {
+            "components": [
+              {
+                "key": "SubBanners",
+                "component": "CaracureSubBanners1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Brand": {
+        "variants": {
+          "CaracureBrand1": {
+            "name": "CarAcure",
+            "logo": "/main-logo.png",
+            "logoAlt": "CarAcure - Car Repair & Service",
+            "address": "123 Auto Street, New Delhi, India",
+            "addressLine1": "123 Auto Street,",
+            "addressLine2": "New Delhi, India - 110001",
+            "phoneLabel": "+91 98765 43210",
+            "phoneHref": "tel:+919876543210",
+            "email": "info@caracure.com",
+            "emailHref": "mailto:info@caracure.com",
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "https://facebook.com",
+                "icon": "FaFacebookF"
+              },
+              {
+                "label": "Twitter",
+                "href": "#",
+                "icon": "FaTwitter"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://instagram.com",
+                "icon": "FaInstagram"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://youtube.com",
+                "icon": "FaYoutube"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://linkedin.com",
+                "icon": "FaLinkedinIn"
+              }
+            ]
+          }
+        }
+      },
+      "TopBar": {
+        "variants": {
+          "CaracureTopBar1": {
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "https://facebook.com",
+                "icon": "FaFacebookF"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://instagram.com",
+                "icon": "FaInstagram"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://youtube.com",
+                "icon": "FaYoutube"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://linkedin.com",
+                "icon": "FaLinkedinIn"
+              }
+            ]
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "CaracureHeader1": {
+            "navItems": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Services",
+                "href": "/services",
+                "children": [
+                  {
+                    "label": "Car Repair",
+                    "href": "/services/car-repair"
+                  },
+                  {
+                    "label": "Oil Change",
+                    "href": "/services/oil-change"
+                  },
+                  {
+                    "label": "Wheel Alignment",
+                    "href": "/services/wheel-alignment"
+                  },
+                  {
+                    "label": "Brake Service",
+                    "href": "/services/brake-service"
+                  },
+                  {
+                    "label": "Car Wash & Detailing",
+                    "href": "/services/car-wash"
+                  }
+                ]
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              
+              {
+                "label": "Teams",
+                "href": "/teams"
+              },
+              {
+                "label": "FAQ",
+                "href": "/faq"
+              }
+            ],
+            "cta": {
+              "label": "Contact Us",
+              "href": "/contact"
+            }
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "CaracureBanner1": {
+            "taglinePrefix": "Trusted Car Care ",
+            "taglineHighlight": "Experts",
+            "h1Line1": "Car Repair &",
+            "h1Highlight": "Auto",
+            "h1Line2": " Services",
+            "description": "Our skilled team of certified technicians is here to provide top-notch car repair and auto services to ensure your vehicle performs at its best.",
+            "button": {
+              "label": "Our Services",
+              "href": "/services"
+            },
+            "bgImage": "/banner.png",
+            "bgImageAlt": "Mechanic repairing a car engine in a garage"
+          }
+        }
+      },
+      "AboutSection": {
+        "variants": {
+          "CaracureAboutSection1": {
+            "badge": "About Us",
+            "titlePrefix": "Who We ",
+            "titleHighlight": "Are?",
+            "text": "We are a team of skilled and certified technicians dedicated to providing reliable car repair and auto services. Our goal is to keep your vehicle running smoothly and safely with quality care and honest service.",
+            "features": [
+              {
+                "title": "Expert Technicians",
+                "text": "Our certified professionals ensure your vehicle gets the best care.",
+                "icon": "FaWrench"
+              },
+              {
+                "title": "Quality Service",
+                "text": "We use advanced tools and genuine parts for reliable performance.",
+                "icon": "FaCog"
+              },
+              {
+                "title": "Customer Focused",
+                "text": "Your satisfaction is our priority with transparent and honest service.",
+                "icon": "FaHandshake"
+              },
+              {
+                "title": "Complete Car Care",
+                "text": "From routine maintenance to major repairs, we handle it all.",
+                "icon": "MdVerifiedUser"
+              }
+            ],
+            "button": {
+              "label": "More About",
+              "href": "/about"
+            },
+            "mainImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1000&q=80",
+            "mainImageAlt": "Technician repairing a car engine",
+            "secondImage": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80",
+            "secondImageAlt": "Technician changing a car wheel"
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "CaracureServices1": {
+            "badge": "Our Services",
+            "titlePrefix": "Our ",
+            "titleHighlight": "Services",
+            "description": "We provide a complete range of car repair and auto services to keep your vehicle running smoothly and safely on the road.",
+            "services": [
+              {
+                "slug": "wheel-service",
+                "title": "Wheel Service",
+                "text": "Professional wheel service for better performance and safety on the road.",
+                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "oil-change",
+                "title": "Oil Change",
+                "text": "Keep your engine healthy with our quick and reliable oil change service.",
+                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "engine-repair",
+                "title": "Engine Repair",
+                "text": "Expert engine repair to restore power and performance efficiently.",
+                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "inspection-service",
+                "title": "Inspection Service",
+                "text": "Complete vehicle inspection to ensure your car is safe and road ready.",
+                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "car-cleaning",
+                "title": "Car Cleaning",
+                "text": "Professional car cleaning services to keep your vehicle fresh and spotless.",
+                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "engine-cleaning",
+                "title": "Engine Cleaning",
+                "text": "Thorough engine cleaning for improved efficiency and longer life.",
+                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "engine-upgrade",
+                "title": "Engine Upgrade",
+                "text": "Upgrade your engine for better power, performance and fuel efficiency.",
+                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "slug": "brake-checkup",
+                "title": "Brake Checkup",
+                "text": "Complete brake checkup for a safer and smoother driving experience.",
+                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=80"
+              }
+            ]
+          }
+        }
+      },
+      "Help": {
+        "variants": {
+          "CaracureHelp1": {
+            "badge": "Need Professional Help?",
+            "titlePrefix": "Get Your Car Serviced by ",
+            "titleHighlight": "Trusted Experts",
+            "description": "Book a service today and let our skilled technicians take care of your vehicle with reliable service and quality care.",
+            "highlights": [
+              {
+                "label": "Expert Technicians",
+                "icon": "FaTools"
+              },
+              {
+                "label": "Quality Service",
+                "icon": "MdVerifiedUser"
+              },
+              {
+                "label": "Reliable Support",
+                "icon": "FaCar"
+              }
+            ],
+            "button": {
+              "label": "Contact Us",
+              "href": "/contact"
+            },
+            "bgImage": "/help.png",
+            "bgImageAlt": "Smiling technician with a wrench in front of a car in the garage"
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "CaracureTeam1": {
+            "badge": "Our Team",
+            "titlePrefix": "Our Awesome ",
+            "titleHighlight": "Team",
+            "description": "Meet our skilled and experienced team members who are dedicated to providing the best car care and repair services.",
+            "members": [
+              {
+                "name": "Rahul Sharma",
+                "role": "Service Manager",
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Priya Verma",
+                "role": "Senior Technician",
+                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Amit Kumar",
+                "role": "Auto Technician",
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Neha Singh",
+                "role": "Brake Specialist",
+                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Vikram Singh",
+                "role": "Engine Specialist",
+                "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Anjali Gupta",
+                "role": "Customer Support",
+                "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Rohit Mehra",
+                "role": "Wheel & Alignment Expert",
+                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80"
+              },
+              {
+                "name": "Kavita Joshi",
+                "role": "Quality Inspector",
+                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+              }
+            ],
+            "socials": [
+              {
+                "label": "Facebook",
+                "icon": "FaFacebookF"
+              },
+              {
+                "label": "Twitter",
+                "icon": "FaTwitter"
+              },
+              {
+                "label": "Instagram",
+                "icon": "FaInstagram"
+              },
+              {
+                "label": "LinkedIn",
+                "icon": "FaLinkedinIn"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "CaracureTestimonial1": {
+            "badge": "Client Feedback",
+            "titlePrefix": "Testi",
+            "titleHighlight": "monials",
+            "description": "What our customers say about our car repair and service experience.",
+            "bgImage": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80",
+            "testimonials": [
+              {
+                "id": 1,
+                "name": "Priya Sharma",
+                "location": "New Delhi, India",
+                "text": "Excellent service and professional staff! My car was serviced on time and now it's running smoother than ever. Highly recommended for anyone looking for reliable car care.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80"
+              },
+              {
+                "id": 2,
+                "name": "Rahul Verma",
+                "location": "Gurgaon, India",
+                "text": "Great experience! The team quickly identified the issue and fixed it at a reasonable cost. Very honest and skilled. I'll definitely come back for future services.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80"
+              },
+              {
+                "id": 3,
+                "name": "Ananya Gupta",
+                "location": "Noida, India",
+                "text": "Transparent pricing and no unnecessary add-ons. They explained every repair clearly and returned my car earlier than promised. Truly a trustworthy garage.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80"
+              },
+              {
+                "id": 4,
+                "name": "Amit Khanna",
+                "location": "Faridabad, India",
+                "text": "Brought my SUV for a brake and suspension issue. The mechanics were knowledgeable and the work quality is top-notch. The ride feels brand new again.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80"
+              },
+              {
+                "id": 5,
+                "name": "Neha Kapoor",
+                "location": "Ghaziabad, India",
+                "text": "Friendly staff, clean workshop and quick pickup and drop service. My regular service now happens here without any stress. Highly satisfied with the results.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80"
+              },
+              {
+                "id": 6,
+                "name": "Vikram Singh",
+                "location": "Greater Noida, India",
+                "text": "Best car service I've had in years. They diagnosed an engine noise others missed and fixed it the same day. Fair price and genuine spare parts.",
+                "rating": 5,
+                "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80"
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "CaracureBlog1": {
+            "badge": "Our Blog",
+            "titlePrefix": "Latest ",
+            "titleHighlight": "News",
+            "description": "Stay updated with our latest tips, service updates and expert advice to keep your vehicle in the best condition.",
+            "posts": [
+              {
+                "id": 1,
+                "day": "12",
+                "month": "MAR",
+                "title": "Essential Car Maintenance Tips for a Long-Lasting Vehicle",
+                "excerpt": "Regular maintenance keeps your car running smoothly and helps prevent costly repairs. Here are some essential tips to keep your...",
+                "author": "Admin",
+                "comments": 8,
+                "favorites": 12,
+                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/essential-car-maintenance-tips"
+              },
+              {
+                "id": 2,
+                "day": "18",
+                "month": "MAR",
+                "title": "When to Replace Your Car Tyres?",
+                "excerpt": "Your tyres play a crucial role in safety and performance. Learn the key signs that indicate it's time for a replacement...",
+                "author": "Admin",
+                "comments": 12,
+                "favorites": 10,
+                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/when-to-replace-car-tyres"
+              },
+              {
+                "id": 3,
+                "day": "22",
+                "month": "MAR",
+                "title": "How Often Should You Change Engine Oil?",
+                "excerpt": "Engine oil keeps your engine clean, cool, and running efficiently. Find out the recommended oil change intervals...",
+                "author": "Admin",
+                "comments": 6,
+                "favorites": 15,
+                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/how-often-change-engine-oil"
+              },
+              {
+                "id": 4,
+                "day": "26",
+                "month": "MAR",
+                "title": "Signs Your Car Brakes Need Immediate Attention",
+                "excerpt": "Your brakes are vital for safety. Discover the common warning signs of brake problems and what to do to keep your...",
+                "author": "Admin",
+                "comments": 10,
+                "favorites": 8,
+                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/signs-car-brakes-need-attention"
+              },
+              {
+                "id": 5,
+                "day": "30",
+                "month": "MAR",
+                "title": "Benefits of Regular Car Servicing",
+                "excerpt": "Regular car servicing not only improves performance but also extends the life of your vehicle. Here are the top benefits...",
+                "author": "Admin",
+                "comments": 15,
+                "favorites": 20,
+                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/benefits-of-regular-car-servicing"
+              },
+              {
+                "id": 6,
+                "day": "02",
+                "month": "APR",
+                "title": "How to Keep Your Car Looking New",
+                "excerpt": "A clean car not only looks great but also helps maintain its value. Follow these simple car cleaning tips to keep your...",
+                "author": "Admin",
+                "comments": 9,
+                "favorites": 14,
+                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/how-to-keep-car-looking-new"
+              },
+              {
+                "id": 7,
+                "day": "05",
+                "month": "APR",
+                "title": "Understanding Your Car's Warning Lights",
+                "excerpt": "Don't ignore those lights on your dashboard. Learn what the most common warning lights mean and when to seek help...",
+                "author": "Admin",
+                "comments": 5,
+                "favorites": 18,
+                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/understanding-warning-lights"
+              },
+              {
+                "id": 8,
+                "day": "10",
+                "month": "APR",
+                "title": "Top 5 Summer Car Care Tips",
+                "excerpt": "Summer heat can be tough on your vehicle. Follow these tips to ensure your car is ready for those hot summer drives...",
+                "author": "Admin",
+                "comments": 11,
+                "favorites": 22,
+                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/summer-car-care-tips"
+              },
+              {
+                "id": 9,
+                "day": "14",
+                "month": "APR",
+                "title": "The Importance of Wheel Alignment",
+                "excerpt": "Proper wheel alignment ensures a smooth ride and prevents uneven tire wear. Discover why you shouldn't skip this service...",
+                "author": "Admin",
+                "comments": 7,
+                "favorites": 13,
+                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/importance-of-wheel-alignment"
+              },
+              {
+                "id": 10,
+                "day": "18",
+                "month": "APR",
+                "title": "Choosing the Right Coolant for Your Engine",
+                "excerpt": "Using the correct coolant is essential for preventing engine overheating. Learn how to choose the right one for your car...",
+                "author": "Admin",
+                "comments": 4,
+                "favorites": 9,
+                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/choosing-right-coolant"
+              },
+              {
+                "id": 11,
+                "day": "22",
+                "month": "APR",
+                "title": "Winter Car Care: Preparing for the Cold",
+                "excerpt": "Cold weather brings unique challenges for your vehicle. Get your car ready for winter with these essential maintenance tips...",
+                "author": "Admin",
+                "comments": 14,
+                "favorites": 25,
+                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/winter-car-care-tips"
+              },
+              {
+                "id": 12,
+                "day": "26",
+                "month": "APR",
+                "title": "How to Improve Your Car's Fuel Efficiency",
+                "excerpt": "Save money at the pump with these simple and effective ways to boost your car's fuel economy and performance...",
+                "author": "Admin",
+                "comments": 16,
+                "favorites": 30,
+                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
+                "href": "/blog/improve-fuel-efficiency"
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "CaracureFooter1": {
+            "aboutText": "We provide reliable and professional car repair and auto services to keep your vehicle running smoothly and safely on the road. Our skilled technicians are committed to delivering quality service and complete customer satisfaction.",
+            "quickLinks": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+               {
+                "label": "Teams",
+                "href": "/teams"
+              }, {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "services": [
+              {
+                "label": "Wheel Service",
+                "href": "/services/wheel-service"
+              },
+              {
+                "label": "Oil Change",
+                "href": "/services/oil-change"
+              },
+              {
+                "label": "Engine Repair",
+                "href": "/services/engine-repair"
+              },
+              {
+                "label": "Inspection Service",
+                "href": "/services/inspection-service"
+              },
+              {
+                "label": "Car Cleaning",
+                "href": "/services/car-cleaning"
+              },
+              {
+                "label": "Engine Cleaning",
+                "href": "/services/engine-cleaning"
+              },
+              {
+                "label": "Engine Upgrade",
+                "href": "/services/engine-upgrade"
+              }
+            ],
+            "supportCard": {
+              "title": "24/7 Customer Support",
+              "text": "We're always here to help you with your vehicle needs."
+            },
+            "socials": [
+              {
+                "label": "Facebook",
+                "href": "#",
+                "icon": "FaFacebookF"
+              },
+              {
+                "label": "Twitter",
+                "href": "#",
+                "icon": "FaTwitter"
+              },
+              {
+                "label": "Instagram",
+                "href": "#",
+                "icon": "FaInstagram"
+              },
+              {
+                "label": "YouTube",
+                "href": "#",
+                "icon": "FaYoutube"
+              }
+            ],
+            "bgImage": "/footer.png"
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "CaracureWhyChooseUs1": {
+            "badge": "Why Choose Us",
+            "titlePrefix": "Why ",
+            "titleHighlight": "Choose Us",
+            "description": "We are committed to providing high-quality car repair and service with expert technicians, advanced tools and a customer-first approach. Your vehicle's safety and performance are always our priority.",
+            "mainImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1200&q=80",
+            "mainImageAlt": "Mechanic repairing a car engine in the garage",
+            "features": [
+              {
+                "title": "Experienced Team",
+                "text": "Skilled and certified technicians dedicated to quality service.",
+                "icon": "FaCar"
+              },
+              {
+                "title": "Complete Repair Services",
+                "text": "From routine maintenance to major repairs, we handle it all with precision.",
+                "icon": "FaTools"
+              },
+              {
+                "title": "Customer Satisfaction",
+                "text": "We are committed to delivering reliable service and a hassle-free experience.",
+                "icon": "MdOutlineVerifiedUser"
+              },
+              {
+                "title": "Modern Equipment",
+                "text": "We use advanced tools and technology for accurate diagnostics and repairs.",
+                "icon": "FaCog"
+              }
+            ]
+          }
+        }
+      },
+      "GalleryPage": {
+        "variants": {
+          "CaracureGalleryPage1": {
+            "badge": "Gallery",
+            "titlePrefix": "Working ",
+            "titleHighlight": "Gallery",
+            "description": "Explore some moments from our workshop, showcasing our work, process and customer service.",
+            "images": [
+              { "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80", "alt": "Wheel service in the workshop" },
+              { "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80", "alt": "Engine oil change" },
+              { "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80", "alt": "Technician repairing an engine" },
+              { "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80", "alt": "Under-car inspection" },
+              { "src": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80", "alt": "Car wash and cleaning" },
+              { "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80", "alt": "Engine diagnostics" },
+              { "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80", "alt": "Car polishing" },
+              { "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=800&q=80", "alt": "Car on the lift" },
+              { "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=800&q=80", "alt": "Brake service" }
+            ],
+            "videoTitlePrefix": "Our ",
+            "videoTitleHighlight": "Video Gallery",
+            "videoDescription": "Watch our workshop in action and see how we take care of your vehicle with expert service and advanced tools.",
+            "videos": [
+              {
+                "title": "Workshop Overview",
+                "text": "Take a quick tour of our service center and see our expert team in action.",
+                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80",
+                "href": "#"
+              },
+              {
+                "title": "Oil Change Process",
+                "text": "See how we perform a professional oil change.",
+                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80",
+                "href": "#"
+              },
+              {
+                "title": "Wheel Service",
+                "text": "Watch our wheel service and balancing process.",
+                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80",
+                "href": "#"
+              }
+            ]
+          }
+        }
+      },
+      "FaqPage": {
+        "variants": {
+          "CaracureFaqPage1": {
+            "badge": "FAQ",
+            "titlePrefix": "Frequently Asked ",
+            "titleHighlight": "Questions",
+            "description": "Find answers to common questions about our car repair and maintenance services.",
+            "faqs": [
+              {
+                "question": "What services do you offer at your auto repair shop?",
+                "answer": "We offer a full range of car repair and maintenance services including engine repair, oil change, brake service, wheel alignment, AC repair, battery replacement and general inspection."
+              },
+              {
+                "question": "How often should I get my car serviced?",
+                "answer": "As a general rule, a car should be serviced every 6 months or every 5,000 to 10,000 km, whichever comes first. Check your owner's manual for the schedule recommended for your vehicle."
+              },
+              {
+                "question": "How do I know if my brakes need to be replaced?",
+                "answer": "Common signs include squealing or grinding noises, a soft or spongy brake pedal, the car pulling to one side while braking, vibration, or a brake warning light on the dashboard."
+              },
+              {
+                "question": "What steps can I take between services?",
+                "answer": "Regularly check tyre pressure, engine oil and coolant levels, keep your lights and wipers working, and keep the car clean. Listen for unusual noises and get them checked early."
+              },
+              {
+                "question": "Can I book an appointment online?",
+                "answer": "Yes, you can book a service online through our Book a Service button or call us directly. Choose a convenient time and our team will confirm your appointment."
+              },
+              {
+                "question": "Do you provide warranty on your auto repairs?",
+                "answer": "Yes. We provide a warranty on our workmanship and on genuine parts we install. Warranty terms vary by service, and our team will explain them before the work begins."
+              }
+            ],
+            "contactImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1000&q=80",
+            "contactSubtitle": "Still have questions?",
+            "contactTitle": "Get in Touch",
+            "contactText": "Our team is always ready to help you with any questions about our services.",
+            "contacts": [
+              { "icon": "FaPhoneAlt", "text": "+91 98765 43210", "href": "tel:+919876543210" },
+              { "icon": "FaEnvelope", "text": "info@example.com", "href": "mailto:info@example.com" },
+              { "icon": "FaMapMarkerAlt", "text": "123 Auto Street, New Delhi, India - 110001" }
+            ]
+          }
+        }
+      },
+      "ContactPage": {
+        "variants": {
+          "CaracureContactPage1": {
+            "badge": "Contact Us",
+            "titlePrefix": "Get In ",
+            "titleHighlight": "Touch",
+            "description": "Have questions about our services or want to book an appointment? We're here to help. Reach out to us using the details below or send us a message.",
+            "bgImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80",
+            "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
+            "infos": [
+              { "title": "Phone Number", "lines": ["+91 98765 43210", "+91 98765 43211"], "icon": "FaPhoneAlt" },
+              { "title": "Email Address", "lines": ["info@example.com", "support@example.com"], "icon": "FaEnvelope" },
+              {
+                "title": "Our Address",
+                "lines": ["123 Auto Street, Sector 15,", "New Delhi, India - 110001"],
+                "icon": "FaMapMarkerAlt"
+              }
+            ],
+            "socialTitle": "Follow Us On Social Media",
+            "socialText": "Stay connected with us for the latest updates, offers and service tips.",
+            "socials": [
+              { "label": "Facebook", "href": "#", "icon": "FaFacebookF", "bg": "bg-[#1877f2]" },
+              { "label": "X", "href": "#", "icon": "FaXTwitter", "bg": "bg-black" },
+              { "label": "Instagram", "href": "#", "icon": "FaInstagram", "bg": "bg-gradient-to-tr from-[#f9a825] via-[#e1306c] to-[#833ab4]" },
+              { "label": "YouTube", "href": "#", "icon": "FaYoutube", "bg": "bg-[#e2232b]" },
+              { "label": "LinkedIn", "href": "#", "icon": "FaLinkedinIn", "bg": "bg-[#0a66c2]" }
+            ],
+            "formTitle": "Send Us a Message",
+            "formText": "Fill out the form and our team will get back to you shortly.",
+            "formButtonText": "Send Message",
+            "formSuccessMessage": "Thank you! Your message has been sent."
+          }
+        }
+      },
+      "SubBanners": {
+        "variants": {
+          "CaracureSubBanners1": {
+            "about": {
+              "title": "About Us",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "About Us",
+                  "active": true
+                }
+              ]
+            },
+            "services": {
+              "title": "Our Services",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Services",
+                  "active": true
+                }
+              ]
+            },
+            "gallery": {
+              "title": "Gallery",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Gallery",
+                  "active": true
+                }
+              ]
+            },
+            "blog": {
+              "title": "Blog",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Blog",
+                  "active": true
+                }
+              ]
+            },
+            "teams": {
+              "title": "Team",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Team",
+                  "active": true
+                }
+              ]
+            },
+            "contact": {
+              "title": "Contact Us",
+               "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Contact Us",
+                  "active": true
+                }
+              ]
+            },
+            "appointment": {
+              "title": "Book Appointment",
+              "bgImage": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1920&q=80",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Appointment",
+                  "active": true
+                }
+              ]
+            },
+                 "faq": {
+              "title": "FAQ",
+                 "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "FAQ",
+                  "active": true
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

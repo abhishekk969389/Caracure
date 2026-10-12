@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaPhoneAlt,
@@ -10,6 +9,7 @@ import {
   FaMapMarkerAlt,
   FaHandshake,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronRight } from "react-icons/fi";
 
 import type { IconType } from "react-icons";
@@ -21,7 +21,7 @@ const brandData: CaracureBrandData = carData.brand as CaracureBrandData;
 
 const iconMap: Record<string, IconType> = {
   FaFacebookF,
-  FaTwitter,
+  FaTwitter: FaXTwitter,
   FaInstagram,
   FaYoutube,
 };
@@ -177,9 +177,9 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10">
           <div className="mx-auto max-w-[1320px] px-4 py-5 text-center text-sm sm:px-6 sm:py-6 sm:text-base lg:px-10 xl:px-6">
-            &copy; Copyrights 2026{" "}
-            <span className="text-[#e2232b]">{brandData.name}</span>. All Rights
-            Reserved.
+            &copy; {footerData.copyrightText?.split('{brandName}')[0]}
+            
+            {footerData.copyrightText?.split('{brandName}')[1]}
           </div>
         </div>
       </div>

@@ -78,7 +78,7 @@ export default function LatestNews({ isPaginated = false }: { isPaginated?: bool
               </h3>
 
               {/* Meta */}
-              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-sm text-slate-600">
+              {/* <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-sm text-slate-600">
                 <span className="flex items-center gap-2">
                   <FaUser className="text-[#0d1f45]" />
                   {post.author}
@@ -91,7 +91,7 @@ export default function LatestNews({ isPaginated = false }: { isPaginated?: bool
                   <FaHeart className="text-[#0d1f45]" />
                   Favorite: {post.favorites}
                 </span>
-              </div>
+              </div> */}
 
               {/* Excerpt */}
               <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600 sm:text-base">

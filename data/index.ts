@@ -55,4 +55,12 @@ export function getBlogSlugs() {
   return site.ourBlogs.posts.map((p) => p.href.replace('/blog/', ''));
 }
 
+export function getTeamMemberBySlug(slug: string) {
+  return site.ourTeam.members.find((m) => m.slug === slug);
+}
+
+export function getTeamSlugs() {
+  return site.ourTeam.members.map((m) => m.slug || "");
+}
+
 export default carData;

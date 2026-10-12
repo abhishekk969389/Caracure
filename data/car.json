@@ -106,13 +106,13 @@
             "name": "CarAcure",
             "logo": "/main-logo.png",
             "logoAlt": "CarAcure - Car Repair & Service",
-            "address": "123 Auto Street, New Delhi, India",
+            "address": "123 Auto Street, New York, USA",
             "addressLine1": "123 Auto Street,",
-            "addressLine2": "New Delhi, India - 110001",
-            "phoneLabel": "+91 98765 43210",
-            "phoneHref": "tel:+919876543210",
-            "email": "info@caracure.com",
-            "emailHref": "mailto:info@caracure.com",
+            "addressLine2": "New York, USA- 110001",
+            "phoneLabel": "+1 0000000000",
+            "phoneHref": "tel:+10000000000",
+            "email": "dummy@xyz.com",
+            "emailHref": "mailto:dummy@xyz.com",
             "socials": [
               {
                 "label": "Facebook",
@@ -121,7 +121,7 @@
               },
               {
                 "label": "Twitter",
-                "href": "#",
+                "href": "https://www.x.com",
                 "icon": "FaTwitter"
               },
               {
@@ -167,7 +167,8 @@
                 "href": "https://linkedin.com",
                 "icon": "FaLinkedinIn"
               }
-            ]
+            ],
+            "address": "123 Auto Street, New York, USA- 110001"
           }
         }
       },
@@ -188,24 +189,36 @@
                 "href": "/services",
                 "children": [
                   {
-                    "label": "Car Repair",
-                    "href": "/services/car-repair"
+                    "label": "Wheel Service",
+                    "href": "/services/wheel-service"
                   },
                   {
                     "label": "Oil Change",
                     "href": "/services/oil-change"
                   },
                   {
-                    "label": "Wheel Alignment",
-                    "href": "/services/wheel-alignment"
+                    "label": "Engine Repair",
+                    "href": "/services/engine-repair"
                   },
                   {
-                    "label": "Brake Service",
-                    "href": "/services/brake-service"
+                    "label": "Inspection Service",
+                    "href": "/services/inspection-service"
                   },
                   {
-                    "label": "Car Wash & Detailing",
-                    "href": "/services/car-wash"
+                    "label": "Car Cleaning",
+                    "href": "/services/car-cleaning"
+                  },
+                  {
+                    "label": "Engine Cleaning",
+                    "href": "/services/engine-cleaning"
+                  },
+                  {
+                    "label": "Engine Upgrade",
+                    "href": "/services/engine-upgrade"
+                  },
+                  {
+                    "label": "Brake Checkup",
+                    "href": "/services/brake-checkup"
                   }
                 ]
               },
@@ -217,7 +230,6 @@
                 "label": "Blog",
                 "href": "/blog"
               },
-              
               {
                 "label": "Teams",
                 "href": "/teams"
@@ -230,7 +242,9 @@
             "cta": {
               "label": "Contact Us",
               "href": "/contact"
-            }
+            },
+            "contactText": "Call Anytime",
+            "contactPhone": "+1 0000000000"
           }
         }
       },
@@ -304,51 +318,170 @@
                 "slug": "wheel-service",
                 "title": "Wheel Service",
                 "text": "Professional wheel service for better performance and safety on the road.",
-                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=700&q=80",
+                "description": "Our wheel service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our wheel service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our wheel service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete wheel service diagnostics",
+                  "Repair of wheel components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "oil-change",
                 "title": "Oil Change",
                 "text": "Keep your engine healthy with our quick and reliable oil change service.",
-                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=700&q=80",
+                "description": "Our oil change is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our oil change is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our oil change is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete oil change diagnostics",
+                  "Repair of oil change components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "engine-repair",
                 "title": "Engine Repair",
                 "text": "Expert engine repair to restore power and performance efficiently.",
-                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=700&q=80",
+                "description": "Our engine repair is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our engine repair is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our engine repair is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete engine diagnostics",
+                  "Repair of engine components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "inspection-service",
                 "title": "Inspection Service",
                 "text": "Complete vehicle inspection to ensure your car is safe and road ready.",
-                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80",
+                "description": "Our inspection service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our inspection service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our inspection service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete inspection service diagnostics",
+                  "Repair of inspection components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "car-cleaning",
                 "title": "Car Cleaning",
                 "text": "Professional car cleaning services to keep your vehicle fresh and spotless.",
-                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=700&q=80",
+                "description": "Our car cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our car cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our car cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete car cleaning diagnostics",
+                  "Repair of car cleaning components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "engine-cleaning",
                 "title": "Engine Cleaning",
                 "text": "Thorough engine cleaning for improved efficiency and longer life.",
-                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80",
+                "description": "Our engine cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our engine cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our engine cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete engine cleaning diagnostics",
+                  "Repair of engine cleaning components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "engine-upgrade",
                 "title": "Engine Upgrade",
                 "text": "Upgrade your engine for better power, performance and fuel efficiency.",
-                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=700&q=80",
+                "description": "Our engine upgrade is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our engine upgrade is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our engine upgrade is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete engine upgrade diagnostics",
+                  "Repair of engine upgrade components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               },
               {
                 "slug": "brake-checkup",
                 "title": "Brake Checkup",
                 "text": "Complete brake checkup for a safer and smoother driving experience.",
-                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=80",
+                "description": "Our brake checkup is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                "process": [
+                  "Our brake checkup is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
+                  "Our brake checkup is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently."
+                ],
+                "included": [
+                  "Complete brake checkup diagnostics",
+                  "Repair of brake components",
+                  "Replacement of damaged parts",
+                  "Oil and filter change",
+                  "Cooling system check",
+                  "Performance testing"
+                ],
+                "processIntro": "We follow a systematic approach to identify the issue, repair the damage and ensure optimum performance for your vehicle."
               }
-            ]
+            ],
+            "detail": {
+              "sidebarTitle": "All Services",
+              "includedPrefix": "What's ",
+              "includedHighlight": "Included?",
+              "processPrefix": "Our ",
+              "processHighlight": "Process"
+            }
           }
         }
       },
@@ -393,42 +526,326 @@
               {
                 "name": "Rahul Sharma",
                 "role": "Service Manager",
-                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80",
+                "slug": "rahul-sharma",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+1 0000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Priya Verma",
                 "role": "Senior Technician",
-                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80",
+                "slug": "priya-verma",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Amit Kumar",
                 "role": "Auto Technician",
-                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80",
+                "slug": "amit-kumar",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Neha Singh",
                 "role": "Brake Specialist",
-                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=700&q=80",
+                "slug": "neha-singh",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Vikram Singh",
                 "role": "Engine Specialist",
-                "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=700&q=80",
+                "slug": "vikram-singh",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Anjali Gupta",
                 "role": "Customer Support",
-                "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
+                "slug": "anjali-gupta",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Rohit Mehra",
                 "role": "Wheel & Alignment Expert",
-                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80",
+                "slug": "rohit-mehra",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               },
               {
                 "name": "Kavita Joshi",
                 "role": "Quality Inspector",
-                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80",
+                "slug": "kavita-joshi",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "email": "dummy@xyz.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+10000000000",
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
+              },
+              {
+                "name": "Rohan Mehta",
+                "role": "Senior Mechanic",
+                "slug": "rohan-mehta",
+                "email": "rohanmehta@gmail.com",
+                "phone": "+1 0000000000",
+                "phoneHref": "tel:+1 0000000000",
+                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80",
+                "bio": [
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
+                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
+                ],
+                "socials": [
+                  {
+                    "label": "Facebook",
+                    "href": "https://www.facebook.com",
+                    "icon": "FaFacebookF"
+                  },
+                  {
+                    "label": "Instagram",
+                    "href": "https://www.instagram.com",
+                    "icon": "FaInstagram"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://www.linkedin.com",
+                    "icon": "FaLinkedinIn"
+                  },
+                  {
+                    "label": "X",
+                    "href": "#",
+                    "icon": "FaXTwitter"
+                  }
+                ]
               }
             ],
             "socials": [
@@ -448,7 +865,13 @@
                 "label": "LinkedIn",
                 "icon": "FaLinkedinIn"
               }
-            ]
+            ],
+            "detail": {
+              "badge": "Team Detail",
+              "titlePrefix": "Team ",
+              "titleHighlight": "Detail",
+              "description": "Meet our skilled and dedicated team members who work hard to keep your vehicle running smoothly and safely."
+            }
           }
         }
       },
@@ -464,7 +887,7 @@
               {
                 "id": 1,
                 "name": "Priya Sharma",
-                "location": "New Delhi, India",
+                "location": "New York, USA",
                 "text": "Excellent service and professional staff! My car was serviced on time and now it's running smoother than ever. Highly recommended for anyone looking for reliable car care.",
                 "rating": 5,
                 "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80"
@@ -531,7 +954,42 @@
                 "comments": 8,
                 "favorites": 12,
                 "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/essential-car-maintenance-tips"
+                "href": "/blog/essential-car-maintenance-tips",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "March 12, 2024",
+                "intro": "Regular maintenance keeps your car running smoothly and helps prevent costly repairs. Whether you drive a new vehicle or an older one, following a few essential maintenance practices can extend its life, improve performance, and ensure your safety on the road.",
+                "sections": [
+                  {
+                    "heading": "1. Keep Your Engine Oil Clean",
+                    "paragraphs": [
+                      "Engine oil lubricates the moving parts of your engine and helps keep it cool. Over time, the oil becomes dirty and less effective, which can lead to engine damage. It's important to check your oil level regularly and change it as recommended by your vehicle's manufacturer."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "2. Check and Replace Tyres",
+                    "paragraphs": [
+                      "Tyres play a crucial role in your safety and the overall performance of your car. Regularly check tyre pressure, tread depth, and look for signs of wear or damage. Properly inflated tyres improve fuel efficiency and provide better control while driving."
+                    ],
+                    "quote": "Well-maintained tyres not only give you a smoother ride but also keep you safe in all weather conditions."
+                  },
+                  {
+                    "heading": "3. Inspect Brakes Regularly",
+                    "paragraphs": [
+                      "Your brakes are one of the most important safety features in your car. If you notice unusual noises, reduced braking performance, or a soft brake pedal, it's time to have them inspected by a professional."
+                    ]
+                  }
+                ],
+                "outro": "By following these simple car maintenance tips, you can keep your vehicle in excellent condition, avoid unexpected breakdowns, and enjoy a safer, more comfortable driving experience."
               },
               {
                 "id": 2,
@@ -543,7 +1001,41 @@
                 "comments": 12,
                 "favorites": 10,
                 "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/when-to-replace-car-tyres"
+                "href": "/blog/when-to-replace-car-tyres",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "March 18, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"When to Replace Your Car Tyres?\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of When",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing when, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 3,
@@ -555,7 +1047,44 @@
                 "comments": 6,
                 "favorites": 15,
                 "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/how-often-change-engine-oil"
+                "href": "/blog/how-often-change-engine-oil",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "March 22, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"How Often Should You Change Engine Oil?\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of How",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing how, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 4,
@@ -567,7 +1096,41 @@
                 "comments": 10,
                 "favorites": 8,
                 "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/signs-car-brakes-need-attention"
+                "href": "/blog/signs-car-brakes-need-attention",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "March 26, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Signs Your Car Brakes Need Immediate Attention\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Signs",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing signs, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 5,
@@ -579,7 +1142,44 @@
                 "comments": 15,
                 "favorites": 20,
                 "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/benefits-of-regular-car-servicing"
+                "href": "/blog/benefits-of-regular-car-servicing",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "March 30, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Benefits of Regular Car Servicing\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Benefits",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing benefits, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 6,
@@ -591,7 +1191,41 @@
                 "comments": 9,
                 "favorites": 14,
                 "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/how-to-keep-car-looking-new"
+                "href": "/blog/how-to-keep-car-looking-new",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 02, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"How to Keep Your Car Looking New\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of How",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing how, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 7,
@@ -603,7 +1237,44 @@
                 "comments": 5,
                 "favorites": 18,
                 "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/understanding-warning-lights"
+                "href": "/blog/understanding-warning-lights",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 05, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Understanding Your Car's Warning Lights\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Understanding",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing understanding, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 8,
@@ -615,7 +1286,41 @@
                 "comments": 11,
                 "favorites": 22,
                 "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/summer-car-care-tips"
+                "href": "/blog/summer-car-care-tips",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 10, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Top 5 Summer Car Care Tips\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Top",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing top, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 9,
@@ -627,7 +1332,44 @@
                 "comments": 7,
                 "favorites": 13,
                 "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/importance-of-wheel-alignment"
+                "href": "/blog/importance-of-wheel-alignment",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 14, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"The Importance of Wheel Alignment\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of The",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing the, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 10,
@@ -639,7 +1381,41 @@
                 "comments": 4,
                 "favorites": 9,
                 "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/choosing-right-coolant"
+                "href": "/blog/choosing-right-coolant",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 18, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Choosing the Right Coolant for Your Engine\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Choosing",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing choosing, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 11,
@@ -651,7 +1427,44 @@
                 "comments": 14,
                 "favorites": 25,
                 "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/winter-car-care-tips"
+                "href": "/blog/winter-car-care-tips",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 22, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"Winter Car Care: Preparing for the Cold\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of Winter",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing winter, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "images": [
+                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop",
+                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop"
+                    ]
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               },
               {
                 "id": 12,
@@ -663,9 +1476,47 @@
                 "comments": 16,
                 "favorites": 30,
                 "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
-                "href": "/blog/improve-fuel-efficiency"
+                "href": "/blog/improve-fuel-efficiency",
+                "tags": [
+                  "Maintenance",
+                  "Tips",
+                  "Safety",
+                  "Performance"
+                ],
+                "category": "Auto Repair Guide",
+                "date": "April 26, 2024",
+                "intro": "Understanding the intricacies of your vehicle is paramount to ensuring its longevity and performance. In this post, we delve deep into \"How to Improve Your Car's Fuel Efficiency\", exploring the best practices and expert recommendations that will keep you safely on the road.",
+                "sections": [
+                  {
+                    "heading": "1. The Importance of How",
+                    "paragraphs": [
+                      "Every component of your vehicle plays a vital role in its overall functionality. When discussing how, it is crucial to recognize that proactive care can prevent minor issues from becoming major, costly repairs down the line.",
+                      "Experts agree that regular inspections and timely interventions are the keys to a healthy vehicle. Whether you're a daily commuter or a weekend road-tripper, staying informed is your best defense against unexpected breakdowns."
+                    ]
+                  },
+                  {
+                    "heading": "2. Expert Strategies for Success",
+                    "paragraphs": [
+                      "Implementing a routine check is simple once you know what to look for. Start by consulting your owner's manual, which provides a wealth of specific information tailored to your exact make and model.",
+                      "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
+                    ],
+                    "quote": "Investing a little time in understanding your car today saves a massive headache tomorrow."
+                  },
+                  {
+                    "heading": "3. Long-term Benefits",
+                    "paragraphs": [
+                      "The long-term benefits of these practices cannot be overstated. Not only do they preserve the resale value of your vehicle, but they also optimize fuel efficiency and ensure maximum safety for you and your passengers.",
+                      "Ultimately, treating your car with respect translates to reliable transportation for years to come."
+                    ]
+                  }
+                ],
+                "outro": "We hope this guide provides you with actionable insights. Remember, the journey to a well-maintained vehicle begins with a single step. Stay proactive, drive safely, and don't hesitate to reach out to professionals when in doubt."
               }
-            ]
+            ],
+            "detail": {
+              "recentTitle": "Recent Posts",
+              "recentCount": 5
+            }
           }
         }
       },
@@ -694,10 +1545,11 @@
                 "label": "Blog",
                 "href": "/blog"
               },
-               {
+              {
                 "label": "Teams",
                 "href": "/teams"
-              }, {
+              },
+              {
                 "label": "Contact Us",
                 "href": "/contact"
               }
@@ -739,26 +1591,27 @@
             "socials": [
               {
                 "label": "Facebook",
-                "href": "#",
+                "href": "https://www.facebook.com",
                 "icon": "FaFacebookF"
               },
               {
                 "label": "Twitter",
-                "href": "#",
+                "href": "https://www.x.com",
                 "icon": "FaTwitter"
               },
               {
                 "label": "Instagram",
-                "href": "#",
+                "href": "https://www.instagram.com",
                 "icon": "FaInstagram"
               },
               {
                 "label": "YouTube",
-                "href": "#",
+                "href": "https://www.youtube.com",
                 "icon": "FaYoutube"
               }
             ],
-            "bgImage": "/footer.png"
+            "bgImage": "/footer.png",
+            "copyrightText": "@Copyrights 2026 All Rights Reserved. Powered By Lestow"
           }
         }
       },
@@ -804,15 +1657,42 @@
             "titleHighlight": "Gallery",
             "description": "Explore some moments from our workshop, showcasing our work, process and customer service.",
             "images": [
-              { "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80", "alt": "Wheel service in the workshop" },
-              { "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80", "alt": "Engine oil change" },
-              { "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80", "alt": "Technician repairing an engine" },
-              { "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80", "alt": "Under-car inspection" },
-              { "src": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80", "alt": "Car wash and cleaning" },
-              { "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80", "alt": "Engine diagnostics" },
-              { "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80", "alt": "Car polishing" },
-              { "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=800&q=80", "alt": "Car on the lift" },
-              { "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=800&q=80", "alt": "Brake service" }
+              {
+                "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80",
+                "alt": "Wheel service in the workshop"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80",
+                "alt": "Engine oil change"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80",
+                "alt": "Technician repairing an engine"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80",
+                "alt": "Under-car inspection"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80",
+                "alt": "Car wash and cleaning"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80",
+                "alt": "Engine diagnostics"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80",
+                "alt": "Car polishing"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=800&q=80",
+                "alt": "Car on the lift"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=800&q=80",
+                "alt": "Brake service"
+              }
             ],
             "videoTitlePrefix": "Our ",
             "videoTitleHighlight": "Video Gallery",
@@ -878,9 +1758,20 @@
             "contactTitle": "Get in Touch",
             "contactText": "Our team is always ready to help you with any questions about our services.",
             "contacts": [
-              { "icon": "FaPhoneAlt", "text": "+91 98765 43210", "href": "tel:+919876543210" },
-              { "icon": "FaEnvelope", "text": "info@example.com", "href": "mailto:info@example.com" },
-              { "icon": "FaMapMarkerAlt", "text": "123 Auto Street, New Delhi, India - 110001" }
+              {
+                "icon": "FaPhoneAlt",
+                "text": "+1 0000000000",
+                "href": "tel:+1 0000000000"
+              },
+              {
+                "icon": "FaEnvelope",
+                "text": "dummy@xyz.com",
+                "href": "mailto:dummy@xyz.com"
+              },
+              {
+                "icon": "FaMapMarkerAlt",
+                "text": "123 Auto Street, New York, USA- 110001"
+              }
             ]
           }
         }
@@ -895,22 +1786,64 @@
             "bgImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80",
             "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
             "infos": [
-              { "title": "Phone Number", "lines": ["+91 98765 43210", "+91 98765 43211"], "icon": "FaPhoneAlt" },
-              { "title": "Email Address", "lines": ["info@example.com", "support@example.com"], "icon": "FaEnvelope" },
+              {
+                "title": "Phone Number",
+                "lines": [
+                  "+1 0000000000",
+                  "+1 0000000000"
+                ],
+                "icon": "FaPhoneAlt"
+              },
+              {
+                "title": "Email Address",
+                "lines": [
+                  "dummy@xyz.com",
+                  "dummy@xyz.com"
+                ],
+                "icon": "FaEnvelope"
+              },
               {
                 "title": "Our Address",
-                "lines": ["123 Auto Street, Sector 15,", "New Delhi, India - 110001"],
+                "lines": [
+                  "123 Auto Street, Sector 15,",
+                  "New York, USA- 110001"
+                ],
                 "icon": "FaMapMarkerAlt"
               }
             ],
             "socialTitle": "Follow Us On Social Media",
             "socialText": "Stay connected with us for the latest updates, offers and service tips.",
             "socials": [
-              { "label": "Facebook", "href": "#", "icon": "FaFacebookF", "bg": "bg-[#1877f2]" },
-              { "label": "X", "href": "#", "icon": "FaXTwitter", "bg": "bg-black" },
-              { "label": "Instagram", "href": "#", "icon": "FaInstagram", "bg": "bg-gradient-to-tr from-[#f9a825] via-[#e1306c] to-[#833ab4]" },
-              { "label": "YouTube", "href": "#", "icon": "FaYoutube", "bg": "bg-[#e2232b]" },
-              { "label": "LinkedIn", "href": "#", "icon": "FaLinkedinIn", "bg": "bg-[#0a66c2]" }
+              {
+                "label": "Facebook",
+                "href": "https://www.facebook.com",
+                "icon": "FaFacebookF",
+                "bg": "bg-[#1877f2]"
+              },
+              {
+                "label": "X",
+                "href": "#",
+                "icon": "FaXTwitter",
+                "bg": "bg-black"
+              },
+              {
+                "label": "Instagram",
+                "href": "https://www.instagram.com",
+                "icon": "FaInstagram",
+                "bg": "bg-gradient-to-tr from-[#f9a825] via-[#e1306c] to-[#833ab4]"
+              },
+              {
+                "label": "YouTube",
+                "href": "https://www.youtube.com",
+                "icon": "FaYoutube",
+                "bg": "bg-[#e2232b]"
+              },
+              {
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com",
+                "icon": "FaLinkedinIn",
+                "bg": "bg-[#0a66c2]"
+              }
             ],
             "formTitle": "Send Us a Message",
             "formText": "Fill out the form and our team will get back to you shortly.",
@@ -994,7 +1927,7 @@
             },
             "contact": {
               "title": "Contact Us",
-               "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.png",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1020,9 +1953,9 @@
                 }
               ]
             },
-                 "faq": {
+            "faq": {
               "title": "FAQ",
-                 "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.png",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1030,6 +1963,60 @@
                 },
                 {
                   "label": "FAQ",
+                  "active": true
+                }
+              ]
+            },
+            "teamDetail": {
+              "title": "Team Detail",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Team",
+                  "href": "/teams"
+                },
+                {
+                  "label": "Team Detail",
+                  "active": true
+                }
+              ]
+            },
+            "serviceDetail": {
+              "title": "Service Detail",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Service",
+                  "href": "/services"
+                },
+                {
+                  "label": "Service Detail",
+                  "active": true
+                }
+              ]
+            },
+            "blogDetail": {
+              "title": "Blog Detail",
+              "bgImage": "/subbanner.png",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Blog Detail",
                   "active": true
                 }
               ]

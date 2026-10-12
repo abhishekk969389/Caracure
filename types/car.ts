@@ -13,6 +13,7 @@ export interface SocialLink {
   label: string;
   href: string;
   icon: string;
+  bg?: string;
 }
 
 export interface FooterLink {
@@ -36,12 +37,22 @@ export interface ServiceItem {
   title: string;
   text: string;
   image: string;
+  description?: string;
+  included?: string[];
+  processIntro?: string;
+  process?: string[];
 }
 
 export interface TeamMember {
   name: string;
   role: string;
   image: string;
+  slug?: string;
+  bio?: string[];
+  email?: string;
+  phone?: string;
+  phoneHref?: string;
+  socials?: SocialLink[];
 }
 
 export interface TestimonialItem {
@@ -51,6 +62,13 @@ export interface TestimonialItem {
   text: string;
   rating: number;
   avatar: string;
+}
+
+export interface BlogSection {
+  heading: string;
+  paragraphs: string[];
+  images?: string[];
+  quote?: string;
 }
 
 export interface BlogPostItem {
@@ -64,6 +82,12 @@ export interface BlogPostItem {
   favorites: number;
   image: string;
   href: string;
+  date?: string;
+  intro?: string;
+  sections?: BlogSection[];
+  outro?: string;
+  tags?: string[];
+  category?: string;
 }
 
 export interface SectionProps<T> {

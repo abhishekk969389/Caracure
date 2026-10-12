@@ -30,14 +30,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
+    <header className="relative z-40 w-full bg-white shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-4 sm:px-8 lg:px-12">
         {/* LEFT: Logo (box width matches the logo, so there is no empty gap before the nav) */}
         <Link
           href="/"
           onClick={closeMenu}
           aria-label="Home"
-          className="relative block h-12 w-[140px] shrink-0 sm:h-14 sm:w-[162px] lg:h-20 lg:w-[280px] xl:h-[88px] xl:w-[280px]"
+          className="relative block h-15 w-[180px] shrink-0 sm:h-14 sm:w-[162px] lg:h-20 lg:w-[280px] xl:h-[88px] xl:w-[280px]"
         >
           <Image
             src={brandData.logo}
@@ -82,12 +82,21 @@ export default function Navbar() {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  <div className="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                  <div className={`absolute left-0 top-full z-50 pt-3 transition-all duration-200 ${
+                    servicesOpen ? "hidden lg:hidden" : "invisible opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+                  }`}>
                     <ul className="min-w-[220px] overflow-hidden rounded-xl bg-white py-2 shadow-[0_12px_36px_rgba(15,31,75,0.12)] ring-1 ring-gray-100">
                       {item.children.map((child) => (
                         <li key={child.label}>
                           <Link
                             href={child.href}
+                            onClick={() => {
+                              if (document.activeElement instanceof HTMLElement) {
+                                document.activeElement.blur();
+                              }
+                              setServicesOpen(true);
+                              setTimeout(() => setServicesOpen(false), 200);
+                            }}
                             className="block px-5 py-2.5 text-[14px] font-medium text-[#0d1f45] transition-colors hover:bg-red-50 hover:text-[#e2232b]"
                           >
                             {child.label}

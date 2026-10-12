@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -76,22 +77,23 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
         {isGrid ? (
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {teamData.members.map((m) => (
-              <article key={m.name} className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
-                <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-slate-200">
-                  <Image
-                    src={m.image}
-                    alt={`${m.name}, ${m.role}`}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                <h3 className="mt-4 text-lg font-bold leading-tight text-[#0d1f45] transition-colors duration-300 group-hover:text-[#e2232b] sm:text-xl">
-                  {m.name}
-                </h3>
-                <p className="mt-1 text-sm font-semibold text-slate-500">{m.role}</p>
-                <span className="mx-auto mt-2.5 h-[2px] w-10 bg-[#e2232b] transition-all duration-300 group-hover:w-16" />
+              <article key={m.slug || m.name} className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
+                <Link href={m.slug ? `/teams/${m.slug}` : "#"} className="block">
+                  <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-slate-200">
+                    <Image
+                      src={m.image}
+                      alt={`${m.name}, ${m.role}`}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold leading-tight text-[#0d1f45] transition-colors duration-300 group-hover:text-[#e2232b] sm:text-xl">
+                    {m.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-slate-500">{m.role}</p>
+                  <span className="mx-auto mt-2.5 block h-[2px] w-10 bg-[#e2232b] transition-all duration-300 group-hover:w-16" />
+                </Link>
 
                 <ul className="mt-4 flex items-center justify-center gap-2.5 pb-1">
                   {teamData.socials.map(({ label, icon }) => {
@@ -125,25 +127,26 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
             >
               {teamData.members.map((m) => (
                 <div
-                  key={m.name}
+                  key={m.slug || m.name}
                   className="shrink-0 basis-full px-3 py-6 sm:basis-1/2 lg:basis-1/4"
                 >
                   <article className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
-                    <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-slate-200">
-                      <Image
-                        src={m.image}
-                        alt={`${m.name}, ${m.role}`}
-                        fill
-                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-
-                    <h3 className="mt-4 text-lg font-bold leading-tight text-[#0d1f45] transition-colors duration-300 group-hover:text-[#e2232b] sm:text-xl">
-                      {m.name}
-                    </h3>
-                    <p className="mt-1 text-sm font-semibold text-slate-500">{m.role}</p>
-                    <span className="mx-auto mt-2.5 h-[2px] w-10 bg-[#e2232b] transition-all duration-300 group-hover:w-16" />
+                    <Link href={m.slug ? `/teams/${m.slug}` : "#"} className="block">
+                      <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-slate-200">
+                        <Image
+                          src={m.image}
+                          alt={`${m.name}, ${m.role}`}
+                          fill
+                          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                      <h3 className="mt-4 text-lg font-bold leading-tight text-[#0d1f45] transition-colors duration-300 group-hover:text-[#e2232b] sm:text-xl">
+                        {m.name}
+                      </h3>
+                      <p className="mt-1 text-sm font-semibold text-slate-500">{m.role}</p>
+                      <span className="mx-auto mt-2.5 block h-[2px] w-10 bg-[#e2232b] transition-all duration-300 group-hover:w-16" />
+                    </Link>
 
                     <ul className="mt-4 flex items-center justify-center gap-2.5 pb-1">
                       {teamData.socials.map(({ label, icon }) => {

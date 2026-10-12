@@ -34,8 +34,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${exo2.variable} ${mulish.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <TopBar />
-        <Navbar />
+        <div className="sticky top-0 z-50 w-full flex flex-col shadow-sm">
+          <TopBar />
+          <Navbar />
+        </div>
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>

@@ -20,6 +20,9 @@ export default function Banner() {
         sizes="100vw"
         className="-z-20 object-cover object-[72%_center] lg:object-center"
       />
+      
+      {/* mobile: dark overlay for readable text, lg+: soft left fade only */}
+    <div className="absolute inset-0 -z-10 bg-black/70 sm:hidden" />
      
       <div
         aria-hidden="true"

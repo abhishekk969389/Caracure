@@ -810,42 +810,6 @@
                     "icon": "FaXTwitter"
                   }
                 ]
-              },
-              {
-                "name": "Rohan Mehta",
-                "role": "Senior Mechanic",
-                "slug": "rohan-mehta",
-                "email": "rohanmehta@gmail.com",
-                "phone": "+1 0000000000",
-                "phoneHref": "tel:+1 0000000000",
-                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80",
-                "bio": [
-                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
-                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
-                  "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely."
-                ],
-                "socials": [
-                  {
-                    "label": "Facebook",
-                    "href": "https://www.facebook.com",
-                    "icon": "FaFacebookF"
-                  },
-                  {
-                    "label": "Instagram",
-                    "href": "https://www.instagram.com",
-                    "icon": "FaInstagram"
-                  },
-                  {
-                    "label": "LinkedIn",
-                    "href": "https://www.linkedin.com",
-                    "icon": "FaLinkedinIn"
-                  },
-                  {
-                    "label": "X",
-                    "href": "#",
-                    "icon": "FaXTwitter"
-                  }
-                ]
               }
             ],
             "socials": [

@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import type { ServiceItem } from "@/types/car";
 
@@ -19,8 +22,13 @@ export default function ServiceDetailSection({ service }: { service: ServiceItem
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_340px]">
           
           {/* LEFT: Main Content */}
-          <div>
-            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-md bg-slate-100">
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+          >
+            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-md bg-slate-100 shadow-md">
               <Image
                 src={service.image}
                 alt={service.title}
@@ -41,7 +49,13 @@ export default function ServiceDetailSection({ service }: { service: ServiceItem
             </p>
 
             {service.included && service.included.length > 0 && (
-              <div className="mt-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="mt-10"
+              >
                 <h3 className="text-2xl font-extrabold text-[#0d1f45] sm:text-3xl" style={{ fontFamily: 'var(--font-display)' }}>
                   {detailData?.includedPrefix}<span className="text-[#e2232b]">{detailData?.includedHighlight}</span>
                 </h3>
@@ -49,18 +63,31 @@ export default function ServiceDetailSection({ service }: { service: ServiceItem
                 <div className="mt-6 rounded-md bg-gray-100 p-6 sm:p-8 border border-slate-100 shadow-[0_4px_22px_rgba(15,31,75,0.04)]">
                   <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {service.included.map((item, i) => (
-                      <li key={i} className="flex items-center gap-3">
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.35, delay: i * 0.05 }}
+                        className="flex items-center gap-3"
+                      >
                         <FaCheckCircle className="shrink-0 text-lg text-[#e2232b]" />
                         <span className="text-sm md:text-base font-medium text-slate-700">{item}</span>
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             )}
             
             {service.process && service.process.length > 0 && (
-              <div className="mt-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className="mt-10"
+              >
                 <h3 className="text-2xl font-extrabold text-[#0d1f45] sm:text-3xl" style={{ fontFamily: 'var(--font-display)' }}>
                   {detailData?.processPrefix}<span className="text-[#e2232b]">{detailData?.processHighlight}</span>
                 </h3>
@@ -76,13 +103,19 @@ export default function ServiceDetailSection({ service }: { service: ServiceItem
                     <p key={i}>{para}</p>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
           
           {/* RIGHT: Sidebar */}
-          <aside className="lg:sticky lg:top-24 h-fit">
-            <div className="rounded-lg bg-red-50/60 overflow-hidden border border-red-100/50">
+          <motion.aside
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className="lg:sticky lg:top-24 h-fit"
+          >
+            <div className="rounded-lg bg-red-50/60 overflow-hidden border border-red-100/50 shadow-sm">
               <div className="p-6 sm:p-6">
                 <h3 className="text-xl font-bold text-[#0d1f45]">{detailData?.sidebarTitle || "All Services"}</h3>
                 <span className="mt-3 block h-[3px] w-10 bg-[#e2232b]" />
@@ -114,7 +147,7 @@ export default function ServiceDetailSection({ service }: { service: ServiceItem
                 })}
               </ul>
             </div>
-          </aside>
+          </motion.aside>
 
         </div>
       </div>

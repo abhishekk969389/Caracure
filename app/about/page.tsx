@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <main className="w-full min-h-screen">
       <SubBanner pageKey="about" />
-      <AboutSection/>
+      <AboutSection showButton={false} />
       <WhyChooseUs/>
       <HelpSection/>
       <TeamSection/>

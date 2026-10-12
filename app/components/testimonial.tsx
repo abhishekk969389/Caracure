@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 import { site as carData } from "@/data/index";
 import type { CaracureTestimonialData } from "@/data/index";
@@ -56,7 +57,13 @@ export default function Testimonials() {
 
       <div className="relative mx-auto max-w-[1150px] px-4 sm:px-6 lg:px-10 xl:px-6">
         {/* Heading */}
-        <div className="mx-auto max-w-[760px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mx-auto max-w-[760px] text-center"
+        >
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-white sm:text-sm">
@@ -71,10 +78,16 @@ export default function Testimonials() {
           <p className="mx-auto max-w-[640px] text-sm leading-relaxed text-white/90 sm:text-base">
             {testimonialData.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Slider */}
-        <div className="mt-6 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
+          className="mt-6 overflow-hidden"
+        >
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${page * 100}%)` }}
@@ -120,18 +133,20 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Controls: arrows + dots */}
         <div className="mt-4 flex items-center justify-center gap-4">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="button"
             onClick={prev}
             aria-label="Previous testimonials"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e2232b] text-white transition hover:bg-[#c41d24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-11 sm:w-11"
           >
             <FiArrowLeft className="text-xl" />
-          </button>
+          </motion.button>
 
           <div className="flex items-center gap-2" role="tablist">
             {Array.from({ length: pageCount }).map((_, i) => (
@@ -149,14 +164,16 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="button"
             onClick={next}
             aria-label="Next testimonials"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e2232b] text-white transition hover:bg-[#c41d24] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-11 sm:w-11"
           >
             <FiArrowRight className="text-xl" />
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>

@@ -8,6 +8,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { site } from "@/data/index";
 import type { CaracureFaqPageData } from "@/data/index";
 import type { IconType } from "react-icons";
+import { motion } from "framer-motion";
 
 const data: CaracureFaqPageData = site.faqPage;
 
@@ -27,7 +28,13 @@ export default function FaqSection() {
     <section className="w-full bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
         {/* heading */}
-        <div className="mx-auto max-w-[760px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mx-auto max-w-[760px] text-center"
+        >
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-600 sm:text-sm">
@@ -43,7 +50,7 @@ export default function FaqSection() {
           <p className="mx-auto mt-2 max-w-[640px] text-sm leading-relaxed text-slate-600 sm:text-base">
             {data.description}
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-6 grid items-start gap-8 sm:mt-10 lg:grid-cols-[1.5fr_1fr] lg:gap-8 xl:gap-10">
           {/* LEFT: accordion */}
@@ -51,8 +58,12 @@ export default function FaqSection() {
             {data.faqs.map((faq, i) => {
               const open = openIndex === i;
               return (
-                <div
+                <motion.div
                   key={faq.question}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: i * 0.06, ease: "easeOut" }}
                   className={`rounded-md border transition-colors ${
                     open
                       ? "border-[#e2232b]/15 bg-[#fdeeee]"
@@ -98,13 +109,19 @@ export default function FaqSection() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
 
           {/* RIGHT: image + get in touch */}
-          <aside className="flex w-full flex-col overflow-hidden rounded-md shadow-[0_8px_30px_rgba(13,31,69,0.12)] lg:h-[640px] xl:h-[680px]">
+          <motion.aside
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="flex w-full flex-col overflow-hidden rounded-md shadow-[0_8px_30px_rgba(13,31,69,0.12)] lg:h-[640px] xl:h-[680px]"
+          >
             <div className="relative min-h-[240px] flex-1 sm:min-h-[300px] lg:min-h-0">
               <Image
                 src={data.contactImage}
@@ -147,7 +164,7 @@ export default function FaqSection() {
                 })}
               </ul>
             </div>
-          </aside>
+          </motion.aside>
         </div>
       </div>
     </section>

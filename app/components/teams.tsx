@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 import type { IconType } from "react-icons";
 import { site as carData } from "@/data/index";
@@ -43,7 +44,7 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
   const goTo = (p: number) => setPage(Math.max(0, Math.min(p, pages - 1)));
 
   const onTouchEnd = (x: number) => {
-    if (touchX.current === null) return;
+    if (perView <= 1 || touchX.current === null) return;
     const diff = touchX.current - x;
     if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
     touchX.current = null;
@@ -55,7 +56,13 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
     <section className="relative w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
         {/* Heading (centered) */}
-        <div className="mx-auto max-w-[760px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mx-auto max-w-[760px] text-center"
+        >
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-600 sm:text-sm">
@@ -71,13 +78,20 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
           <p className="mx-auto max-w-[640px] text-sm leading-relaxed text-slate-600 sm:text-base">
             {teamData.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Content */}
         {isGrid ? (
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {teamData.members.map((m) => (
-              <article key={m.slug || m.name} className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
+            {teamData.members.map((m, idx) => (
+              <motion.div
+                key={m.slug || m.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: (idx % 4) * 0.1, ease: "easeOut" }}
+              >
+              <article className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
                 <Link href={m.slug ? `/teams/${m.slug}` : "#"} className="block">
                   <div className="relative aspect-[8/7] w-full overflow-hidden rounded-sm bg-slate-200">
                     <Image
@@ -113,22 +127,31 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
                   })}
                 </ul>
               </article>
+              </motion.div>
             ))}
           </div>
         ) : (
-          <div
-            className="-mx-3 overflow-hidden"
-            onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
-            onTouchEnd={(e) => onTouchEnd(e.changedTouches[0].clientX)}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="w-full sm:-mx-3 overflow-x-auto sm:overflow-hidden scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory sm:snap-none"
+            onTouchStart={(e) => {
+              if (perView > 1) touchX.current = e.touches[0].clientX;
+            }}
+            onTouchEnd={(e) => {
+              if (perView > 1) onTouchEnd(e.changedTouches[0].clientX);
+            }}
           >
             <div
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${current * 100}%)` }}
+              style={{ transform: perView > 1 ? `translateX(-${current * 100}%)` : "none" }}
             >
               {teamData.members.map((m) => (
                 <div
                   key={m.slug || m.name}
-                  className="shrink-0 basis-full px-3 py-6 sm:basis-1/2 lg:basis-1/4"
+                  className="shrink-0 w-full basis-full sm:basis-1/2 lg:basis-1/4 px-0 sm:px-3 py-6 snap-start sm:snap-none"
                 >
                   <article className="group flex h-full flex-col rounded-lg bg-white p-3.5 text-center shadow-[0_4px_22px_rgba(15,31,75,0.08)] ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_18px_40px_rgba(226,35,43,0.18)] hover:ring-red-100">
                     <Link href={m.slug ? `/teams/${m.slug}` : "#"} className="block">
@@ -169,12 +192,16 @@ export default function TeamSection({ isGrid = false }: { isGrid?: boolean }) {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
 
-        {/* Dots pagination (clickable) */}
+        {/* Dots pagination (clickable) - Hidden on mobile */}
         {!isGrid && (
-          <div className="flex items-center justify-center gap-2.5" role="tablist" aria-label="Team pages">
+          <div
+            className="hidden sm:flex items-center justify-center gap-2.5"
+            role="tablist"
+            aria-label="Team pages"
+          >
             {Array.from({ length: pages }).map((_, i) => (
               <button
                 key={i}

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 import type { IconType } from "react-icons";
 import { site as carData } from "@/data/index";
@@ -29,23 +32,23 @@ const iconMap: Record<string, IconType> = {
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="text-lg font-bold text-white sm:text-xl">{children}</h3>
-      <span className="mt-3 block h-[3px] w-10 bg-[#e2232b]" />
+      <h3 className="text-base font-bold text-white sm:text-xl">{children}</h3>
+      <span className="mt-2.5 block h-[3px] w-8 bg-[#e2232b] sm:mt-3 sm:w-10" />
     </div>
   );
 }
 
 function LinkList({ items }: { items: { label: string; href: string }[] }) {
   return (
-    <ul className="mt-5 space-y-3">
+    <ul className="mt-4 space-y-2.5 sm:mt-5 sm:space-y-3">
       {items.map((item) => (
         <li key={item.label}>
           <Link
             href={item.href}
-            className="group inline-flex items-center gap-3 text-sm text-white/90 transition hover:text-[#e2232b] sm:text-base"
+            className="group inline-flex items-center gap-2 text-xs text-white/90 transition hover:text-[#e2232b] sm:gap-3 sm:text-base"
           >
-            <FiChevronRight className="shrink-0 text-base" />
-            {item.label}
+            <FiChevronRight className="shrink-0 text-xs transition-transform duration-200 group-hover:translate-x-1 sm:text-base" />
+            <span className="leading-snug">{item.label}</span>
           </Link>
         </li>
       ))}
@@ -71,9 +74,15 @@ export default function Footer() {
       <div className="relative">
         {/* Main */}
         <div className="mx-auto max-w-[1320px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16 xl:px-6">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1.4fr] lg:gap-8 lg:pr-10 xl:gap-10 xl:pr-20 2xl:pr-44">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1.4fr] lg:gap-8 lg:pr-10 xl:gap-10 xl:pr-20 2xl:pr-44">
             {/* About */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="col-span-2 lg:col-span-1"
+            >
               <Link href="/" aria-label="CarAcure home" className="inline-block">
                 {/* Put your logo at /public/logo.png */}
                 <Image
@@ -94,33 +103,52 @@ export default function Footer() {
                   const Icon = iconMap[icon];
                   if (!Icon) return null;
                   return (
-                    <Link
-                      key={label}
-                      href={href}
-                      aria-label={label}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 text-white transition hover:border-[#e2232b] hover:bg-[#e2232b]"
-                    >
-                      <Icon className="text-base" />
-                    </Link>
+                    <motion.div key={label} whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.95 }}>
+                      <Link
+                        href={href}
+                        aria-label={label}
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 text-white transition hover:border-[#e2232b] hover:bg-[#e2232b]"
+                      >
+                        <Icon className="text-base" />
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
 
             {/* Quick Links */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              className="col-span-1"
+            >
               <FooterHeading>Quick Links</FooterHeading>
               <LinkList items={footerData.quickLinks} />
-            </div>
+            </motion.div>
 
             {/* Our Services */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+              className="col-span-1"
+            >
               <FooterHeading>Our Services</FooterHeading>
               <LinkList items={footerData.services} />
-            </div>
+            </motion.div>
 
             {/* Contact */}
-            <div className="sm:col-span-2 lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="col-span-2 lg:col-span-1"
+            >
               <FooterHeading>Contact Info</FooterHeading>
 
               <ul className="mt-5 space-y-4 text-sm sm:text-base">
@@ -156,7 +184,11 @@ export default function Footer() {
               </ul>
 
               {/* Support box */}
-              <div className="mt-5 flex w-full max-w-[420px] items-center gap-3 rounded-lg border border-[#e2232b]/60 bg-gradient-to-r from-[#5b0d13]/90 via-[#3a0b10]/90 to-[#1c0a0d]/90 px-4 py-4 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-sm xl:gap-4 xl:px-5">
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.2 }}
+                className="mt-5 flex w-full max-w-[420px] items-center gap-3 rounded-lg border border-[#e2232b]/60 bg-gradient-to-r from-[#5b0d13]/90 via-[#3a0b10]/90 to-[#1c0a0d]/90 px-4 py-4 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-sm xl:gap-4 xl:px-5"
+              >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e2232b] xl:h-14 xl:w-14">
                   <FaHandshake className="text-xl text-white xl:text-2xl" />
                 </span>
@@ -169,8 +201,8 @@ export default function Footer() {
                     {footerData.supportCard.text}
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
 

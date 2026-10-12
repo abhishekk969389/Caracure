@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { site as carData } from "@/data/index";
 import type { SubBannerKey } from "@/data/index";
 import type { BreadcrumbItem } from "@/types/car";
@@ -23,7 +26,7 @@ export default function SubBanner({
   const displayBgImage =
     bgImage ||
     subBannerData?.bgImage ||
-    "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80";
+    "/subbanner.png";
 
   const defaultBreadcrumbs: BreadcrumbItem[] = [
     { label: "Home", href: "/" },
@@ -36,26 +39,41 @@ export default function SubBanner({
   return (
     <section className="relative isolate w-full overflow-hidden bg-[#0a0a0a]">
       {/* Background image */}
-      <Image
-        src={displayBgImage}
-        alt={displayTitle}
-        fill
-        priority
-        sizes="100vw"
-        className="-z-20 object-cover object-[50%_center]"
-      />
+      <motion.div
+        initial={{ scale: 1.05, opacity: 0.8 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="absolute inset-0 -z-20"
+      >
+        <Image
+          src={displayBgImage}
+          alt={displayTitle}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_center]"
+        />
+      </motion.div>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 -z-10 bg-black/60 sm:hidden" />
 
       {/* Main container: Left-aligned content */}
       <div className="mx-auto flex min-h-[220px] max-w-[1320px] flex-col justify-center px-6 py-12 text-left sm:min-h-[280px] sm:px-10 lg:min-h-[360px] lg:px-27">
-        <h1 className="text-2xl font-black uppercase tracking-wider text-white sm:text-3xl md:text-4xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-2xl font-black uppercase tracking-wider text-white sm:text-3xl md:text-4xl"
+        >
           {displayTitle}
-        </h1>
+        </motion.h1>
 
         {/* Minimal inline breadcrumbs directly below title */}
-        <nav
+        <motion.nav
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
           aria-label="Breadcrumb"
           className="mt-2.5 flex items-center gap-2 text-xs font-medium text-slate-300 sm:text-sm md:text-base"
         >
@@ -78,7 +96,7 @@ export default function SubBanner({
               </div>
             );
           })}
-        </nav>
+        </motion.nav>
       </div>
     </section>
   );

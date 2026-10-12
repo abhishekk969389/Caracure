@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUser, FaComment, FaHeart, FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import { site as carData } from "@/data/index";
 import type { CaracureBlogData } from "@/data/index";
@@ -27,7 +28,13 @@ export default function LatestNews({ isPaginated = false }: { isPaginated?: bool
     <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
         {/* Heading */}
-        <div className="mx-auto max-w-[760px] text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mx-auto max-w-[760px] text-center"
+        >
           <div className="flex items-center justify-center gap-3 sm:gap-4">
             <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
             <p className="text-xs font-medium uppercase tracking-wide text-slate-600 sm:text-sm">
@@ -42,73 +49,66 @@ export default function LatestNews({ isPaginated = false }: { isPaginated?: bool
           <p className="mx-auto max-w-[640px] text-sm leading-relaxed text-slate-600 sm:text-base">
             {blogData.description}
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards: 1 col mobile, 2 col md, 3 col lg+ */}
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 xl:gap-6">
-          {displayedPosts.map((post) => (
-            <article
+          {displayedPosts.map((post, idx) => (
+            <motion.div
               key={post.id}
-              className="flex h-full flex-col rounded-md bg-white p-4 shadow-[0_8px_30px_rgba(13,31,69,0.08)] sm:p-5"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.45, delay: (idx % 3) * 0.1, ease: "easeOut" }}
+              whileHover={{ y: -6 }}
+              className="h-full"
             >
-              {/* Image + date badge */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 flex h-[60px] w-[68px] flex-col items-center justify-center bg-[#e2232b] leading-tight text-white sm:h-[68px] sm:w-[76px]">
-                  <span className="text-xl font-extrabold sm:text-2xl">
-                    {post.day}
-                  </span>
-                  <span className="text-xs font-medium sm:text-sm">
-                    {post.month}
-                  </span>
-                </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="mt-5 text-lg font-extrabold leading-snug text-[#0d1f45] sm:text-xl">
-                <Link href={post.href} className="hover:text-[#e2232b]">
-                  {post.title}
-                </Link>
-              </h3>
-
-              {/* Meta */}
-              {/* <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200 pt-4 text-sm text-slate-600">
-                <span className="flex items-center gap-2">
-                  <FaUser className="text-[#0d1f45]" />
-                  {post.author}
-                </span>
-                <span className="flex items-center gap-2">
-                  <FaComment className="text-[#0d1f45]" />
-                  Comments: {post.comments}
-                </span>
-                <span className="flex items-center gap-2">
-                  <FaHeart className="text-[#0d1f45]" />
-                  Favorite: {post.favorites}
-                </span>
-              </div> */}
-
-              {/* Excerpt */}
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600 sm:text-base">
-                {post.excerpt}
-              </p>
-
-              {/* Read more */}
-              <Link
-                href={post.href}
-                className="group mt-5 inline-flex w-fit items-center gap-3 font-medium text-[#e2232b]"
+              <article
+                className="group flex h-full flex-col rounded-md bg-white p-4 shadow-[0_8px_30px_rgba(13,31,69,0.08)] transition-shadow duration-300 hover:shadow-[0_12px_36px_rgba(13,31,69,0.15)] sm:p-5"
               >
-                Read More
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e2232b]/10 transition group-hover:bg-[#e2232b] group-hover:text-white">
-                  <FaArrowRight className="text-sm" />
-                </span>
-              </Link>
-            </article>
+                {/* Image + date badge */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 flex h-[60px] w-[68px] flex-col items-center justify-center bg-[#e2232b] leading-tight text-white sm:h-[68px] sm:w-[76px]">
+                    <span className="text-xl font-extrabold sm:text-2xl">
+                      {post.day}
+                    </span>
+                    <span className="text-xs font-medium sm:text-sm">
+                      {post.month}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="mt-5 text-lg font-extrabold leading-snug text-[#0d1f45] sm:text-xl">
+                  <Link href={post.href} className="transition-colors hover:text-[#e2232b]">
+                    {post.title}
+                  </Link>
+                </h3>
+
+                {/* Excerpt */}
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {post.excerpt}
+                </p>
+
+                {/* Read more */}
+                <Link
+                  href={post.href}
+                  className="mt-5 inline-flex w-fit items-center gap-3 font-medium text-[#e2232b]"
+                >
+                  Read More
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e2232b]/10 transition group-hover:bg-[#e2232b] group-hover:text-white">
+                    <FaArrowRight className="text-sm" />
+                  </span>
+                </Link>
+              </article>
+            </motion.div>
           ))}
         </div>
 

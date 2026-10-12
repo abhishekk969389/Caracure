@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import type { CaracureContactPageData } from "@/data/index";
 
@@ -63,7 +64,11 @@ export default function ContactSection() {
           className="absolute inset-y-0 right-0 hidden w-[47%] bg-[#e2232b] lg:block"
           style={{ clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0 100%)" }}
         />
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="absolute inset-y-0 right-0 hidden w-[46%] lg:block"
           style={{ clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0 100%)" }}
         >
@@ -74,12 +79,17 @@ export default function ContactSection() {
             sizes="46vw"
             className="object-cover"
           />
-        </div>
+        </motion.div>
 
         <div className="relative mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
           <div className="grid items-center gap-10 mt-8 sm:mt-10 md:mt-12 lg:mt-14 lg:grid-cols-2 lg:gap-10 ">
             {/* LEFT: info */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <div className="flex items-center gap-3 sm:gap-4">
                 <span className="h-[3px] w-10 bg-[#e2232b] sm:w-12" />
                 <p className="text-xs font-medium uppercase tracking-wide text-slate-600 sm:text-sm">
@@ -147,10 +157,16 @@ export default function ContactSection() {
                   })}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* RIGHT: form card (overlaps image on lg+) */}
-            <div className="w-full lg:max-w-[500px]">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="w-full lg:max-w-[500px]"
+            >
               <form
                 onSubmit={onSubmit}
                 className="rounded-md bg-white p-5 shadow-[0_10px_40px_rgba(13,31,69,0.15)] sm:p-7"
@@ -230,14 +246,20 @@ export default function ContactSection() {
                   </p>
                 )}
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* ================= MAP ================= */}
       <section className="w-full mt-8 sm:mt-10 md:mt-12 lg:mt-14">
-        <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10 xl:px-6"
+        >
           <iframe
             src={data.mapSrc}
             title="Our location on Google Maps"
@@ -249,7 +271,7 @@ export default function ContactSection() {
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
           />
-        </div>
+        </motion.div>
       </section>
     </>
   );

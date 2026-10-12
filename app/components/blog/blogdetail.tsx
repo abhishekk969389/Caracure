@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaUser, FaQuoteLeft } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { site } from "@/data/index";
 import type { BlogPostItem } from "@/types/car";
 
@@ -17,8 +20,13 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_340px]">
           
           {/* LEFT: Article */}
-          <article>
-            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-md bg-slate-100">
+          <motion.article
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+          >
+            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-md bg-slate-100 shadow-md">
               <Image
                 src={post.image}
                 alt={post.title}
@@ -31,7 +39,7 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
             
             <div className="mt-8 flex items-start gap-5">
               {/* Date Badge */}
-              <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-md bg-[#e2232b] text-white">
+              <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-md bg-[#e2232b] text-white shadow-md">
                 <span className="text-2xl font-bold leading-none">{post.day}</span>
                 <span className="mt-1 text-xs font-semibold uppercase tracking-wider">{post.month}</span>
               </div>
@@ -54,7 +62,14 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
 
               {/* Sections */}
               {post.sections?.map((section, idx) => (
-                <div key={idx} className="mt-10 pt-2">
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: idx * 0.08 }}
+                  className="mt-10 pt-2"
+                >
                   <h2 className="mb-4 text-xl font-bold text-[#0d1f45] sm:text-2xl" style={{ fontFamily: 'var(--font-display)' }}>
                     {section.heading}
                   </h2>
@@ -69,13 +84,13 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
                   {section.images && section.images.length > 0 && (
                     <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                       {section.images.map((img, iIdx) => (
-                        <div key={iIdx} className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-slate-100">
+                        <div key={iIdx} className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-slate-100 shadow-sm">
                           <Image
                             src={img}
                             alt={`${section.heading} image ${iIdx + 1}`}
                             fill
                             sizes="(min-width: 640px) 33vw, 100vw"
-                            className="object-cover"
+                            className="object-cover transition-transform duration-500 hover:scale-105"
                           />
                         </div>
                       ))}
@@ -84,29 +99,42 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
 
                   {/* Quote */}
                   {section.quote && (
-                    <div className="mt-8 flex gap-4 rounded-r-md border-l-4 border-[#e2232b] bg-red-50 p-6">
+                    <div className="mt-8 flex gap-4 rounded-r-md border-l-4 border-[#e2232b] bg-red-50 p-6 shadow-sm">
                       <FaQuoteLeft className="shrink-0 text-3xl text-[#e2232b]" />
                       <p className="text-base font-medium italic text-slate-700 sm:text-lg">
                         "{section.quote}"
                       </p>
                     </div>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
-          </article>
+          </motion.article>
           
           {/* RIGHT: Sidebar */}
-          <aside className="lg:sticky lg:top-24 h-fit">
-            <div className="rounded-lg bg-red-50/60 border border-red-100/50">
+          <motion.aside
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className="lg:sticky lg:top-24 h-fit"
+          >
+            <div className="rounded-lg bg-red-50/60 border border-red-100/50 shadow-sm">
               <div className="p-6 sm:p-8 pb-4">
                 <h3 className="text-xl font-bold text-[#0d1f45]">{detailData?.recentTitle || "Recent Posts"}</h3>
                 <span className="mt-3 block h-[3px] w-10 bg-[#e2232b]" />
               </div>
               
               <ul className="flex flex-col px-6 pb-6 sm:px-8 sm:pb-8">
-                {recentPosts.map((rp) => (
-                  <li key={rp.id} className="border-t border-red-100/60 first:border-t-0 py-4 first:pt-0 last:pb-0">
+                {recentPosts.map((rp, rIdx) => (
+                  <motion.li
+                    key={rp.id}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: rIdx * 0.05 }}
+                    className="border-t border-red-100/60 first:border-t-0 py-4 first:pt-0 last:pb-0"
+                  >
                     <Link href={rp.href} className="group flex items-start gap-4">
                       <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-md bg-slate-200">
                         <Image
@@ -114,7 +142,7 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
                           alt={rp.title}
                           fill
                           sizes="80px"
-                          className="object-cover transition-transform group-hover:scale-110"
+                          className="object-cover transition-transform duration-300 group-hover:scale-110"
                         />
                       </div>
                       <div className="flex flex-col justify-center">
@@ -126,11 +154,11 @@ export default function BlogDetailSection({ post }: { post: BlogPostItem }) {
                         </span>
                       </div>
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
-          </aside>
+          </motion.aside>
 
         </div>
       </div>

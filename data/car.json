@@ -299,9 +299,9 @@
               "label": "More About",
               "href": "/about"
             },
-            "mainImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1000&q=80",
+            "mainImage": "/about1.jpg",
             "mainImageAlt": "Technician repairing a car engine",
-            "secondImage": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80",
+            "secondImage": "/about2.jpg",
             "secondImageAlt": "Technician changing a car wheel"
           }
         }
@@ -318,7 +318,7 @@
                 "slug": "wheel-service",
                 "title": "Wheel Service",
                 "text": "Professional wheel service for better performance and safety on the road.",
-                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s1.jpg",
                 "description": "Our wheel service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our wheel service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -338,7 +338,7 @@
                 "slug": "oil-change",
                 "title": "Oil Change",
                 "text": "Keep your engine healthy with our quick and reliable oil change service.",
-                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s2.jpg",
                 "description": "Our oil change is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our oil change is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -358,7 +358,7 @@
                 "slug": "engine-repair",
                 "title": "Engine Repair",
                 "text": "Expert engine repair to restore power and performance efficiently.",
-                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s3.jpg",
                 "description": "Our engine repair is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our engine repair is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -378,7 +378,7 @@
                 "slug": "inspection-service",
                 "title": "Inspection Service",
                 "text": "Complete vehicle inspection to ensure your car is safe and road ready.",
-                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s4.jpg",
                 "description": "Our inspection service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our inspection service is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -398,7 +398,7 @@
                 "slug": "car-cleaning",
                 "title": "Car Cleaning",
                 "text": "Professional car cleaning services to keep your vehicle fresh and spotless.",
-                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s5.jpg",
                 "description": "Our car cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our car cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -418,7 +418,7 @@
                 "slug": "engine-cleaning",
                 "title": "Engine Cleaning",
                 "text": "Thorough engine cleaning for improved efficiency and longer life.",
-                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s6.jpg",
                 "description": "Our engine cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our engine cleaning is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -438,7 +438,7 @@
                 "slug": "engine-upgrade",
                 "title": "Engine Upgrade",
                 "text": "Upgrade your engine for better power, performance and fuel efficiency.",
-                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s7.jpg",
                 "description": "Our engine upgrade is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our engine upgrade is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of engine issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -458,7 +458,7 @@
                 "slug": "brake-checkup",
                 "title": "Brake Checkup",
                 "text": "Complete brake checkup for a safer and smoother driving experience.",
-                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=700&q=80",
+                "image": "/service/s2.jpg",
                 "description": "Our brake checkup is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
                 "process": [
                   "Our brake checkup is designed to restore your vehicle's performance and reliability. We diagnose and fix all types of vehicle issues using advanced tools and experienced technicians, ensuring your car runs smoothly and efficiently.",
@@ -526,7 +526,7 @@
               {
                 "name": "Rahul Sharma",
                 "role": "Service Manager",
-                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t1.jpg",
                 "slug": "rahul-sharma",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -562,7 +562,7 @@
               {
                 "name": "Priya Verma",
                 "role": "Senior Technician",
-                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t5.jpg",
                 "slug": "priya-verma",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -598,7 +598,7 @@
               {
                 "name": "Amit Kumar",
                 "role": "Auto Technician",
-                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t2.jpg",
                 "slug": "amit-kumar",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -634,7 +634,7 @@
               {
                 "name": "Neha Singh",
                 "role": "Brake Specialist",
-                "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t5.jpg",
                 "slug": "neha-singh",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -670,7 +670,7 @@
               {
                 "name": "Vikram Singh",
                 "role": "Engine Specialist",
-                "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t3.jpg",
                 "slug": "vikram-singh",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -706,7 +706,7 @@
               {
                 "name": "Anjali Gupta",
                 "role": "Customer Support",
-                "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t1.jpg",
                 "slug": "anjali-gupta",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -742,7 +742,7 @@
               {
                 "name": "Rohit Mehra",
                 "role": "Wheel & Alignment Expert",
-                "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t3.jpg",
                 "slug": "rohit-mehra",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -778,7 +778,7 @@
               {
                 "name": "Kavita Joshi",
                 "role": "Quality Inspector",
-                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80",
+                "image": "/team/t5.jpg",
                 "slug": "kavita-joshi",
                 "bio": [
                   "With years of hands-on experience in vehicle maintenance and repair, I ensure that every car receives the highest level of care and attention. My goal is to keep your vehicle in top condition and on the road safely.",
@@ -846,7 +846,7 @@
             "titlePrefix": "Testi",
             "titleHighlight": "monials",
             "description": "What our customers say about our car repair and service experience.",
-            "bgImage": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80",
+            "bgImage": "/service/s3.jpg",
             "testimonials": [
               {
                 "id": 1,
@@ -854,7 +854,7 @@
                 "location": "New York, USA",
                 "text": "Excellent service and professional staff! My car was serviced on time and now it's running smoother than ever. Highly recommended for anyone looking for reliable car care.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t1.jpg"
               },
               {
                 "id": 2,
@@ -862,7 +862,7 @@
                 "location": "Gurgaon, India",
                 "text": "Great experience! The team quickly identified the issue and fixed it at a reasonable cost. Very honest and skilled. I'll definitely come back for future services.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t2.jpg"
               },
               {
                 "id": 3,
@@ -870,7 +870,7 @@
                 "location": "Noida, India",
                 "text": "Transparent pricing and no unnecessary add-ons. They explained every repair clearly and returned my car earlier than promised. Truly a trustworthy garage.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t3.jpg"
               },
               {
                 "id": 4,
@@ -878,7 +878,7 @@
                 "location": "Faridabad, India",
                 "text": "Brought my SUV for a brake and suspension issue. The mechanics were knowledgeable and the work quality is top-notch. The ride feels brand new again.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t4.jpg"
               },
               {
                 "id": 5,
@@ -886,7 +886,7 @@
                 "location": "Ghaziabad, India",
                 "text": "Friendly staff, clean workshop and quick pickup and drop service. My regular service now happens here without any stress. Highly satisfied with the results.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t1.jpg"
               },
               {
                 "id": 6,
@@ -894,7 +894,7 @@
                 "location": "Greater Noida, India",
                 "text": "Best car service I've had in years. They diagnosed an engine noise others missed and fixed it the same day. Fair price and genuine spare parts.",
                 "rating": 5,
-                "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80"
+                "avatar": "/tes/t4.jpg"
               }
             ]
           }
@@ -917,7 +917,7 @@
                 "author": "Admin",
                 "comments": 8,
                 "favorites": 12,
-                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s1.jpg",
                 "href": "/blog/essential-car-maintenance-tips",
                 "tags": [
                   "Maintenance",
@@ -935,8 +935,8 @@
                       "Engine oil lubricates the moving parts of your engine and helps keep it cool. Over time, the oil becomes dirty and less effective, which can lead to engine damage. It's important to check your oil level regularly and change it as recommended by your vehicle's manufacturer."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop"
+                      "/service/s2.jpg",
+                      "/service/s3.jpg"
                     ]
                   },
                   {
@@ -964,7 +964,7 @@
                 "author": "Admin",
                 "comments": 12,
                 "favorites": 10,
-                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s4.jpg",
                 "href": "/blog/when-to-replace-car-tyres",
                 "tags": [
                   "Maintenance",
@@ -1010,7 +1010,7 @@
                 "author": "Admin",
                 "comments": 6,
                 "favorites": 15,
-                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s5.jpg",
                 "href": "/blog/how-often-change-engine-oil",
                 "tags": [
                   "Maintenance",
@@ -1036,8 +1036,8 @@
                       "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop"
+                      "/service/s6.jpg",
+                      "/service/s7.jpg"
                     ]
                   },
                   {
@@ -1059,7 +1059,7 @@
                 "author": "Admin",
                 "comments": 10,
                 "favorites": 8,
-                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/about1.jpg",
                 "href": "/blog/signs-car-brakes-need-attention",
                 "tags": [
                   "Maintenance",
@@ -1105,7 +1105,7 @@
                 "author": "Admin",
                 "comments": 15,
                 "favorites": 20,
-                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/about2.jpg",
                 "href": "/blog/benefits-of-regular-car-servicing",
                 "tags": [
                   "Maintenance",
@@ -1131,8 +1131,8 @@
                       "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop"
+                      "/service/s1.jpg",
+                      "/service/s2.jpg"
                     ]
                   },
                   {
@@ -1154,7 +1154,7 @@
                 "author": "Admin",
                 "comments": 9,
                 "favorites": 14,
-                "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/help.png",
                 "href": "/blog/how-to-keep-car-looking-new",
                 "tags": [
                   "Maintenance",
@@ -1200,7 +1200,7 @@
                 "author": "Admin",
                 "comments": 5,
                 "favorites": 18,
-                "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s3.jpg",
                 "href": "/blog/understanding-warning-lights",
                 "tags": [
                   "Maintenance",
@@ -1226,8 +1226,8 @@
                       "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop"
+                      "/service/s4.jpg",
+                      "/service/s5.jpg"
                     ]
                   },
                   {
@@ -1249,7 +1249,7 @@
                 "author": "Admin",
                 "comments": 11,
                 "favorites": 22,
-                "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s6.jpg",
                 "href": "/blog/summer-car-care-tips",
                 "tags": [
                   "Maintenance",
@@ -1295,7 +1295,7 @@
                 "author": "Admin",
                 "comments": 7,
                 "favorites": 13,
-                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s7.jpg",
                 "href": "/blog/importance-of-wheel-alignment",
                 "tags": [
                   "Maintenance",
@@ -1321,8 +1321,8 @@
                       "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1600795493202-b2f7036d649d?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop"
+                      "/about1.jpg",
+                      "/about2.jpg"
                     ]
                   },
                   {
@@ -1344,7 +1344,7 @@
                 "author": "Admin",
                 "comments": 4,
                 "favorites": 9,
-                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/about1.jpg",
                 "href": "/blog/choosing-right-coolant",
                 "tags": [
                   "Maintenance",
@@ -1390,7 +1390,7 @@
                 "author": "Admin",
                 "comments": 14,
                 "favorites": 25,
-                "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/about2.jpg",
                 "href": "/blog/winter-car-care-tips",
                 "tags": [
                   "Maintenance",
@@ -1416,8 +1416,8 @@
                       "Additionally, partnering with a trusted mechanic for seasonal checkups can provide peace of mind. They have the specialized tools and trained eyes needed to spot subtle warning signs."
                     ],
                     "images": [
-                      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=800&auto=format&fit=crop",
-                      "https://images.unsplash.com/photo-1625047509168-a7006f817ced?q=80&w=800&auto=format&fit=crop"
+                      "/service/s1.jpg",
+                      "/service/s3.jpg"
                     ]
                   },
                   {
@@ -1439,7 +1439,7 @@
                 "author": "Admin",
                 "comments": 16,
                 "favorites": 30,
-                "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&h=760&q=80",
+                "image": "/service/s2.jpg",
                 "href": "/blog/improve-fuel-efficiency",
                 "tags": [
                   "Maintenance",
@@ -1575,7 +1575,7 @@
               }
             ],
             "bgImage": "/footer.png",
-            "copyrightText": "@Copyrights 2026 All Rights Reserved. Powered By Lestow"
+            "copyrightText": "Copyrights 2026 All Rights Reserved. Powered By Lestow"
           }
         }
       },
@@ -1586,7 +1586,7 @@
             "titlePrefix": "Why ",
             "titleHighlight": "Choose Us",
             "description": "We are committed to providing high-quality car repair and service with expert technicians, advanced tools and a customer-first approach. Your vehicle's safety and performance are always our priority.",
-            "mainImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1200&q=80",
+            "mainImage": "/about1.jpg",
             "mainImageAlt": "Mechanic repairing a car engine in the garage",
             "features": [
               {
@@ -1622,39 +1622,39 @@
             "description": "Explore some moments from our workshop, showcasing our work, process and customer service.",
             "images": [
               {
-                "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80",
+                "src": "/service/s1.jpg",
                 "alt": "Wheel service in the workshop"
               },
               {
-                "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80",
+                "src": "/service/s2.jpg",
                 "alt": "Engine oil change"
               },
               {
-                "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=900&q=80",
+                "src": "/service/s3.jpg",
                 "alt": "Technician repairing an engine"
               },
               {
-                "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80",
+                "src": "/service/s4.jpg",
                 "alt": "Under-car inspection"
               },
               {
-                "src": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80",
+                "src": "/service/s5.jpg",
                 "alt": "Car wash and cleaning"
               },
               {
-                "src": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80",
+                "src": "/service/s6.jpg",
                 "alt": "Engine diagnostics"
               },
               {
-                "src": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80",
+                "src": "/service/s7.jpg",
                 "alt": "Car polishing"
               },
               {
-                "src": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=800&q=80",
+                "src": "/about1.jpg",
                 "alt": "Car on the lift"
               },
               {
-                "src": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=800&q=80",
+                "src": "/about2.jpg",
                 "alt": "Brake service"
               }
             ],
@@ -1665,20 +1665,20 @@
               {
                 "title": "Workshop Overview",
                 "text": "Take a quick tour of our service center and see our expert team in action.",
-                "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80",
-                "href": "#"
+                "image": "/banner.png",
+                "href": "https://www.youtube.com/watch?v=CFXfSBR5Q9w"
               },
               {
                 "title": "Oil Change Process",
                 "text": "See how we perform a professional oil change.",
-                "image": "https://images.unsplash.com/photo-1635784063388-1ff609efc1b3?auto=format&fit=crop&w=900&q=80",
-                "href": "#"
+                "image": "/help.png",
+                "href": "https://www.youtube.com/watch?v=O1hF25Cowv8"
               },
               {
                 "title": "Wheel Service",
                 "text": "Watch our wheel service and balancing process.",
-                "image": "https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&fit=crop&w=900&q=80",
-                "href": "#"
+                "image": "/service/s5.jpg",
+                "href": "https://www.youtube.com/watch?v=5zZyiY23OpY"
               }
             ]
           }
@@ -1717,7 +1717,7 @@
                 "answer": "Yes. We provide a warranty on our workmanship and on genuine parts we install. Warranty terms vary by service, and our team will explain them before the work begins."
               }
             ],
-            "contactImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1000&q=80",
+            "contactImage": "/service/s1.jpg",
             "contactSubtitle": "Still have questions?",
             "contactTitle": "Get in Touch",
             "contactText": "Our team is always ready to help you with any questions about our services.",
@@ -1747,7 +1747,7 @@
             "titlePrefix": "Get In ",
             "titleHighlight": "Touch",
             "description": "Have questions about our services or want to book an appointment? We're here to help. Reach out to us using the details below or send us a message.",
-            "bgImage": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1400&q=80",
+            "bgImage": "/footer.png",
             "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
             "infos": [
               {
@@ -1786,7 +1786,7 @@
               },
               {
                 "label": "X",
-                "href": "#",
+                "href": "https://www.twitter.com",
                 "icon": "FaXTwitter",
                 "bg": "bg-black"
               },
@@ -1905,7 +1905,7 @@
             },
             "appointment": {
               "title": "Book Appointment",
-              "bgImage": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1920&q=80",
+              "bgImage": "/subbanner.png",
               "breadcrumbs": [
                 {
                   "label": "Home",

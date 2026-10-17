@@ -26,7 +26,7 @@ export default function SubBanner({
   const displayBgImage =
     bgImage ||
     subBannerData?.bgImage ||
-    "/subbanner.png";
+    "/subbanner.webp";
 
   const defaultBreadcrumbs: BreadcrumbItem[] = [
     { label: "Home", href: "/" },

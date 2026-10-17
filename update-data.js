@@ -8,7 +8,7 @@ const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 const subBanners = data.CaracureIndustries.sections.SubBanners.variants.CaracureSubBanners1;
 subBanners.teamDetail = {
   title: "Team Detail",
-  bgImage: "/subbanner.png",
+  bgImage: "/subbanner.webp",
   breadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Team Detail", active: true }
@@ -16,7 +16,7 @@ subBanners.teamDetail = {
 };
 subBanners.serviceDetail = {
   title: "Service Detail",
-  bgImage: "/subbanner.png",
+  bgImage: "/subbanner.webp",
   breadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
@@ -25,7 +25,7 @@ subBanners.serviceDetail = {
 };
 subBanners.blogDetail = {
   title: "Blog Detail",
-  bgImage: "/subbanner.png",
+  bgImage: "/subbanner.webp",
   breadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/blog" },

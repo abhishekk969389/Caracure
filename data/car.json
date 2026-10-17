@@ -104,7 +104,7 @@
         "variants": {
           "CaracureBrand1": {
             "name": "CarAcure",
-            "logo": "/main-logo.png",
+            "logo": "/main-logo.webp",
             "logoAlt": "CarAcure - Car Repair & Service",
             "address": "123 Auto Street, New York, USA",
             "addressLine1": "123 Auto Street,",
@@ -261,7 +261,7 @@
               "label": "Our Services",
               "href": "/services"
             },
-            "bgImage": "/banner.png",
+            "bgImage": "/banner.webp",
             "bgImageAlt": "Mechanic repairing a car engine in a garage"
           }
         }
@@ -510,7 +510,7 @@
               "label": "Contact Us",
               "href": "/contact"
             },
-            "bgImage": "/help.png",
+            "bgImage": "/help.webp",
             "bgImageAlt": "Smiling technician with a wrench in front of a car in the garage"
           }
         }
@@ -1154,7 +1154,7 @@
                 "author": "Admin",
                 "comments": 9,
                 "favorites": 14,
-                "image": "/help.png",
+                "image": "/help.webp",
                 "href": "/blog/how-to-keep-car-looking-new",
                 "tags": [
                   "Maintenance",
@@ -1574,7 +1574,7 @@
                 "icon": "FaYoutube"
               }
             ],
-            "bgImage": "/footer.png",
+            "bgImage": "/footer.webp",
             "copyrightText": "Copyrights 2026 All Rights Reserved. Powered By Lestow"
           }
         }
@@ -1665,13 +1665,13 @@
               {
                 "title": "Workshop Overview",
                 "text": "Take a quick tour of our service center and see our expert team in action.",
-                "image": "/banner.png",
+                "image": "/banner.webp",
                 "href": "https://www.youtube.com/watch?v=CFXfSBR5Q9w"
               },
               {
                 "title": "Oil Change Process",
                 "text": "See how we perform a professional oil change.",
-                "image": "/help.png",
+                "image": "/help.webp",
                 "href": "https://www.youtube.com/watch?v=O1hF25Cowv8"
               },
               {
@@ -1747,7 +1747,7 @@
             "titlePrefix": "Get In ",
             "titleHighlight": "Touch",
             "description": "Have questions about our services or want to book an appointment? We're here to help. Reach out to us using the details below or send us a message.",
-            "bgImage": "/footer.png",
+            "bgImage": "/footer.webp",
             "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
             "infos": [
               {
@@ -1821,7 +1821,7 @@
           "CaracureSubBanners1": {
             "about": {
               "title": "About Us",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1835,7 +1835,7 @@
             },
             "services": {
               "title": "Our Services",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1849,7 +1849,7 @@
             },
             "gallery": {
               "title": "Gallery",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1863,7 +1863,7 @@
             },
             "blog": {
               "title": "Blog",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1877,7 +1877,7 @@
             },
             "teams": {
               "title": "Team",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1891,7 +1891,7 @@
             },
             "contact": {
               "title": "Contact Us",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1905,7 +1905,7 @@
             },
             "appointment": {
               "title": "Book Appointment",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1919,7 +1919,7 @@
             },
             "faq": {
               "title": "FAQ",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1933,7 +1933,7 @@
             },
             "teamDetail": {
               "title": "Team Detail",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1951,7 +1951,7 @@
             },
             "serviceDetail": {
               "title": "Service Detail",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",
@@ -1969,7 +1969,7 @@
             },
             "blogDetail": {
               "title": "Blog Detail",
-              "bgImage": "/subbanner.png",
+              "bgImage": "/subbanner.webp",
               "breadcrumbs": [
                 {
                   "label": "Home",

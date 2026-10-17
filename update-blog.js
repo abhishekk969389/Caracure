@@ -7,7 +7,7 @@ const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 // 1. SubBanners for Blog Detail
 data.CaracureIndustries.sections.SubBanners.variants.CaracureSubBanners1.blogDetail = {
   title: "Blog Detail",
-  bgImage: "/subbanner.png",
+  bgImage: "/subbanner.webp",
   breadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Blog Detail", active: true }

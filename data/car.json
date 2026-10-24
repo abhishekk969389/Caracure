@@ -186,41 +186,7 @@
               },
               {
                 "label": "Services",
-                "href": "/services",
-                "children": [
-                  {
-                    "label": "Wheel Service",
-                    "href": "/services/wheel-service"
-                  },
-                  {
-                    "label": "Oil Change",
-                    "href": "/services/oil-change"
-                  },
-                  {
-                    "label": "Engine Repair",
-                    "href": "/services/engine-repair"
-                  },
-                  {
-                    "label": "Inspection Service",
-                    "href": "/services/inspection-service"
-                  },
-                  {
-                    "label": "Car Cleaning",
-                    "href": "/services/car-cleaning"
-                  },
-                  {
-                    "label": "Engine Cleaning",
-                    "href": "/services/engine-cleaning"
-                  },
-                  {
-                    "label": "Engine Upgrade",
-                    "href": "/services/engine-upgrade"
-                  },
-                  {
-                    "label": "Brake Checkup",
-                    "href": "/services/brake-checkup"
-                  }
-                ]
+                "href": "/services"
               },
               {
                 "label": "Gallery",
